@@ -1,0 +1,279 @@
+
+<!-- saved from url=(0259)https://883128091-atari-embeds.googleusercontent.com/embeds/16cb204cf3a9d4d223a0a3fd8b0eec5d/inner-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.es.HbYWxpOnkHQ.O%2Fd%3D1%2Frs%3DAHpOoo8Q5mI4Do3edQYD2CLm-J2lckAVZw%2Fm%3D__features__ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base target="_blank">--><base href="." target="_blank">
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Terminal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="ascii-art" class="hidden"></div>
+        <div class="terminal">
+            <div id="output"></div>
+            <label for="input" style="display: none;">Command Input</label>
+            <input type="text" id="input" autofocus="">
+        </div>
+    </div>
+    <div id="timer" class="hidden">This terminal will self-destruct when the timer reaches 0:00 | 05:00</div>
+    <div id="burning-effect"></div>
+    <script src="./script.js.download"></script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ASCII Art will be displayed after the first command
+});
+
+document.getElementById('input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        const input = document.getElementById('input');
+        const command = input.value.trim();
+        processCommand(command);
+        input.value = '';
+        // Show timer after first input
+        if (document.getElementById('timer').classList.contains('hidden')) {
+            document.getElementById('timer').classList.remove('hidden');
+            startTimer(300, document.getElementById('timer'));  // 5 minutes = 300 seconds
+        }
+    }
+});
+
+const asciiArt = `
+
+
+███████╗████████╗██╗  ██╗ █████╗  ██████╗██╗  ██╗
+██╔════╝╚══██╔══╝██║  ██║██╔══██╗██╔════╝██║ ██╔╝
+█████╗     ██║   ███████║███████║██║     █████╔╝ 
+██╔══╝     ██║   ██╔══██║██╔══██║██║     ██╔═██╗ 
+███████╗   ██║   ██║  ██║██║  ██║╚██████╗██║  ██╗
+╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+                                                 
+                                         
+`;
+
+function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    const countdown = setInterval(function () {
+        minutes = Math.floor(timer / 60);
+        seconds = timer % 60;
+
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        display.textContent = `This terminal will self-destruct when the timer reaches 0:00 | ${minutes}:${seconds}`;
+
+        if (--timer < 0) {
+            clearInterval(countdown);
+            initiateSelfDestruct();
+        }
+    }, 1000);
+}
+
+function initiateSelfDestruct() {
+    const output = document.getElementById('output');
+    output.innerHTML += `<div>self.destruct...</div>`;
+    setTimeout(function() {
+        output.innerHTML += `<div class="danger">DANGER!</div>`;
+        setTimeout(function() {
+            let countdown = 3;
+            const interval = setInterval(function() {
+                output.innerHTML += `<div>${countdown}</div>`;
+                if (--countdown < 0) {
+                    clearInterval(interval);
+                    document.body.innerHTML = '<div style="color: red; font-size: 48px; text-align: center;">TERMINAL SHUTDOWN</div>';
+                    startBurningEffect();
+                }
+            }, 1000);
+        }, 3000);
+    }, 3000);
+}
+
+function processCommand(command) {
+    const output = document.getElementById('output');
+    const asciiContainer = document.getElementById('ascii-art');
+
+    if (asciiContainer.classList.contains('hidden')) {
+        asciiContainer.innerHTML = `<pre>${asciiArt}</pre>`;
+        asciiContainer.classList.remove('hidden');
+}
+
+let response = '';
+
+switch (command) {
+    case 'whoiam':
+        response = '...a Hacker...';
+        break;
+    case 'help':
+        response = '...there might be hidden files somewhere... look for a list of every option - type commands';
+        break;
+    case 'commands':
+        response = 'Available commands: | whoiam | help | commands | hello | hi | ls | ls -a | cat -add this command before a .txt file | date | clear';
+        break;
+    case 'hello':
+        response = 'hey mate!';
+        break;
+    case 'hi':
+        response = 'bonjour!';
+        break;
+    case 'ls':
+        response = 'hint1.txt ...';
+        break;
+    case 'ls -a':
+        response = 'hint1.txt hint2.txt dontOpen.txt';
+        break;
+    case 'cat hint1.txt':
+        response = 'nothing to see here, move to hint2.txt';
+        break;
+    case 'cat hint2.txt':
+        response = 'The finalis reside and live in itself - Ultimo ma non per importanza - You must write it down and accept the quest';
+        break;
+    case 'cat dontOpen.txt':
+        response = 'ethack';
+        break;
+    case 'date':
+        response = new Date().toLocaleString();
+        break;
+    case 'clear':
+        output.innerHTML = '';
+        return; // Skip appending anything to output
+    case 'ethack':
+        response = '⟠ Bravo! ⟠ You are now ready for level 2... Follow the Rabbit 🐇🐇🐇';
+        break;
+    default:
+        response = 'Command not recognized';
+}
+
+output.innerHTML += `<div>${command}</div><div>${response}</div>`;
+
+}
+
+</script>
+
+<style>
+body {
+    background-color: black;
+    color: green;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+#ascii-art.hidden {
+    display: none;
+}
+
+#ascii-art {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.terminal {
+    padding: 10px;
+    display: inline-block;
+}
+
+#output {
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+    margin-bottom: 10px;
+}
+
+#input {
+    width: 100%;
+    border: none;
+    background: black;
+    color: green;
+    font-family: monospace;
+    outline: none;
+}
+
+#timer {
+    font-size: 16px;
+    color: rgb(4, 227, 201);
+    margin-top: 10px;
+    font-family: monospace;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#timer.hidden {
+    display: none;
+}
+
+#burning-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.danger {
+    color: red;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+</style></body><style id="stylus-1" type="text/css" class="stylus">/* Apply your custom font globally */
+* {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for web page titles (usually h1 tags) */
+h1, .title, .heading {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for page subtitles (usually h2 tags) */
+h2, .subtitle {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to links */
+a {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to navigation menus */
+nav, .navbar, .menu {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to buttons */
+button, .btn {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to form elements */
+input, textarea, select {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Additional elements that might need custom styling */
+p, span, div, li {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Attempt to style browser-specific elements (experimental) */
+.titlebar, .tab-title {
+    font-family: 'SGA Regular' !important;
+}
+</style></html>
