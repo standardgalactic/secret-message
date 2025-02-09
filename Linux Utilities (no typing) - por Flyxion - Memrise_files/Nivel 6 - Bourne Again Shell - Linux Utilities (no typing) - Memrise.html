@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/6/ -->
+<html lang="es-mx" class=" jefgjt"><!--<![endif]--><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid:not(.vjs-audio-only-mode) {
+        padding-top: 56.25%
+      }
+    </style><title>
+    
+        Nivel 6 - Bourne Again Shell - Linux Utilities (no typing)
+ 
+ - Memrise</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta property="fb:app_id" content="143688012353890"><meta property="fb:page_id" content="149149908445051"><meta name="theme-color" content="#28A0ED"><meta name="apple-mobile-web-app-capable" content="yes"><meta property="og:site_name" content="Memrise"><meta property="og:title" content="Learn Linux Utilities (no typing) and much more on Memrise"><meta property="twitter:title" content="Learn Linux Utilities (no typing) and much more on Memrise"><meta property="twitter:card" content="summary"><meta name="description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Bourne Again Shell."><meta property="og:description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Bourne Again Shell."><meta property="twitter:description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Bourne Again Shell."><meta property="og:url" content="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/6/"><meta property="og:image" content="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><meta property="twitter:image" content="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><meta property="og:site_name" content="Memrise"><meta name="robots" content="noindex, nofollow"><link href="https://plus.google.com/113645013176360560927/" rel="publisher"><link rel="canonical" href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/6/"><!-- App store banner --><meta name="apple-itunes-app" content="app-id=635966718"><link href="https://plus.google.com/113645013176360560927/" rel="publisher"><link rel="icon" type="image/png" href="https://static.memrise.com/dist/img/favicon-32x32-4b55b2cbec13.png"><link rel="shortcut icon" href="https://static.memrise.com/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="https://static.memrise.com/dist/img/apple-touch-new-logo-icon-0b5d79fcb713.png"><link rel="icon" type="image/png" sizes="512x512" href="https://static.memrise.com/dist/img/android-chrome-512x512-ea3b5d046e13.png"><link rel="icon" type="image/png" sizes="192x192" href="https://static.memrise.com/dist/img/android-chrome-192x192-0e3d590fcd13.png"><link rel="icon" type="image/png" sizes="32x32" href="https://static.memrise.com/dist/img/favicon-32x32-4b55b2cbec13.png"><link rel="icon" type="image/png" sizes="16x16" href="https://static.memrise.com/dist/img/favicon-16x16-2561f293d813.png"><link rel="manifest" href="https://community-courses.memrise.com/manifest.json"><link rel="image_src" href="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><link rel="stylesheet" type="text/css" href="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/bootstrap-bdd16bf5a013.css"><link rel="stylesheet" type="text/css" href="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/web-ab2c615ad013.css"><link rel="stylesheet" type="text/css" href="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/icons-8116badb9a13.css"><link rel="stylesheet" type="text/css" href="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/rebrand-1d13f0f12913.css"><link rel="stylesheet" type="text/css" href="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/course-rebrand-3e74be5e6113.css"><link rel="stylesheet" type="text/css" href="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/level-575df6238013.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700" as="style"><!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://static.memrise.com/dist/css/ie-b99bce0c6d13.css" /><![endif]--><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><style></style></head>
+
+<body class="rebrand reverse-header-ruled level-view" data-course-id="6153211" data-level-id="14163123"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-corporate cc-bottom cc-color-override--1887361321 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies and other technologies to enhance your experience and for web analytics. To find out more or change your choices, view our <a href="https://www.memrise.com/es-mx/cookies">Cookie Policy</a>. By clicking <strong>I agree</strong> you consent to the use of such cookies.</span><a aria-label="allow cookies" role="button" tabindex="0" class="cc-btn cc-allow">I agree</a><!--googleon: all--></div>
+    
+
+    <div class="full-height-container">
+
+    
+        
+
+  <div id="header">
+    <div class="rebrand-header-root">
+      <div class="rebrand-header-container">
+        <a href="https://community-courses.memrise.com/dashboard" title="Inicio">
+          <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/logo-c3ae0edc1913.svg" alt="Memrise logo">
+        </a>
+
+        
+
+        <ul class="header-nav ">
+
+          
+
+            <li class="header-nav-item plain ">
+              <a href="https://community-courses.memrise.com/dashboard" class="nav-item-btn">
+                <span class="nav-item-btn-text">Inicio</span>
+              </a>
+            </li>
+
+          
+
+          <li class="header-nav-item plain is-active">
+            <a href="https://community-courses.memrise.com/es-mx/community/courses/" class="nav-item-btn">
+              <span class="nav-item-btn-text">Cursos</span>
+            </a>
+          </li>
+
+           
+
+            
+              <li class="header-nav-item plain create ">
+                <a href="https://community-courses.memrise.com/groups/" class="nav-item-btn">
+                  <span class="nav-item-btn-text">Grupos</span>
+                </a>
+              </li>
+
+             
+
+            <li class="header-profile-wrapper">
+              <span class="header-info-card js-info-toggle sel-info-toggle">
+                <span class="info-card-inner" accesskey="h">
+                  <span class="info-card-picture">
+                    <img class="profile-avatar" src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/13994876_220524_0151_28.png" alt="">
+                  </span>
+                </span>
+              </span>
+              <span class="header-dropdown-arrow js-info-toggle"></span>
+              
+<div class="header-profile-inner">
+    <div class="profile-row profile-details">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="profile-row profile-links">
+        <a href="https://community-courses.memrise.com/user/Flyxion/" class="profile-link">
+            <i class="profile-link-icon link-icon-1"></i>
+            <span class="profile-link-text">Mi perfil</span>
+        </a>
+        <a href="https://community-courses.memrise.com/settings/" class="profile-link">
+            <i class="profile-link-icon link-icon-2"></i>
+            <span class="profile-link-text">Ajustes</span>
+        </a>
+        <a href="https://community-courses.memrise.com/signout" class="profile-link js-logout sel-logout" data-testid="logout-btn">
+            <i class="profile-link-icon link-icon-3"></i>
+            <span class="profile-link-text">Salir</span>
+        </a>
+    </div>
+</div>
+
+            </li>
+
+           
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+
+        <div id="page-head" class="">
+            <div class="inner">
+                
+    
+
+<div class="course-wrapper">
+    <div class="course-header course-header-slim">
+
+        <div class="slim-course-title">
+            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" class="course-photo">
+                <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/13994876000220216032722.png">
+            </a>
+
+            <div class="course-details">
+
+                <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" accesskey="c">
+                    <h1 class="course-name" itemprop="name" title="Linux Utilities (no typing)">Linux Utilities (no typing)</h1>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="more-info">
+            
+
+<div class="course-creator">
+    
+        <a href="https://community-courses.memrise.com/user/Flyxion/courses/teaching/" class="creator-image thumbnail whitebox thumbnail-s" itemprop="url">
+            <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/13994876_220524_0151_28.png" alt="">
+        </a>
+        <div class="details">
+            <h5 class="created-by">Creado por </h5>
+
+            <a data-role="hovercard" data-user-id="13994876" data-direction="bottom" href="https://community-courses.memrise.com/user/Flyxion/courses/teaching/" rel="author" class="creator-name" itemprop="url">
+                <span itemprop="additionalName">Flyxion</span>
+            </a>
+        </div>
+
+    
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+    
+
+    
+    
+        
+
+<div class="course-tabs-wrap">
+    <div class="container">
+        <div class="left">
+            <ul class="nav nav-pills chromeless">
+                <li>
+                    <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" class="tab">
+                        <i class="ico ico-list"></i>
+                        
+                            Niveles (7)
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="right">
+            
+                <a href="https://community-courses.memrise.com/course/6153211/linux-utilities-no-typing/edit/" class="btn">
+                    <span class="ico ico-edit"></span>
+                    <span class="text">Editar curso</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
+
+    
+
+
+    
+        <div id="content" class="">
+            <div class="container container-main">
+                
+
+    
+        <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/5/" class="level-nav level-nav-prev" accesskey="z" title="" data-placement="top" data-original-title="Nivel previo [Tecla: Z]">
+            <i class="ico ico-left ico-arr-left"></i>
+            <span class="level-name">Nivel 5</span>
+        </a>
+    
+
+    
+        <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/7/" class="level-nav level-nav-next" accesskey="c" title="" data-placement="top" data-original-title="Siguiente nivel [Tecla: C]" aria-describedby="tooltip510604">
+            <span class="level-name">Nivel 7</span>
+            <i class="ico ico-left ico-arr-right"></i>
+        </a>
+    
+
+    <div class="central-column">
+
+        
+            
+
+<div class="progress-box progress-box-level with-icon">
+
+    
+    <div class="level-icon">
+        <strong class="level-number">
+            
+                Nivel 6
+ 
+
+        </strong>
+        
+    
+        <i class="level-ico level-ico-plant"></i>
+    
+
+    </div>
+    
+
+    <div class="infos">
+        
+            <a class="edit-button button mini" href="https://community-courses.memrise.com/course/6153211/linux-utilities-no-typing/edit/#l_14163123" accesskey="e" title="[Accesskey: E]">
+                <span class="ico ico-s ico-edit"></span>
+                <span class="text">Editar nivel</span>
+            </a>
+        
+
+        
+            <h3 class="progress-box-title">
+                Bourne Again Shell
+            </h3>
+        
+
+        <div class="progress" title="" data-placement="bottom" data-original-title="100% learned">
+            
+                <span class="bar bar-success" style="width: 100%;"></span>
+            
+        </div>
+    </div>
+
+    <hr>
+
+    
+
+    <div class="actions actions-left">
+        
+            <div class="btn-group">
+                <button class="button small dropdown-toggle" data-toggle="dropdown">
+                    <span class="text">Opciones</span>
+                    <span class="ico ico-arr-down"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                        <li>
+                            <a href="https://community-courses.memrise.com/aprender/review?course_id=6153211&amp;level_index=6" title="" data-placement="right" data-tracking-name="level_details_session" accesskey="o" data-original-title="Repasar las palabras vistas [Tecla de acceso: O]">
+                                <i class="ico ico-water"></i>
+                                Repasar
+                            </a>
+                        </li>
+                    
+                    <li>
+                        <a href="https://community-courses.memrise.com/aprender/preview?course_id=6153211&amp;level_index=6" title="" data-placement="right" accesskey="p" data-original-title="Mostrar palabras como presentación [Tecla: P]">
+                            <i class="ico ico-look"></i>
+                            Vista previa
+                        </a>
+                    </li>
+                    
+                        <li>
+                            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/6/#" data-role="level-restart" title="" data-placement="right" data-original-title="Borrar historial de aprendizaje">
+                                <i class="ico ico-loop"></i>
+                                Volver a empezar
+                            </a>
+                        </li>
+                    
+                    
+                    
+                        <li class="divider"></li>
+                        <li>
+                            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/6/#" data-role="auto-learn" title="" data-placement="right" accesskey="a" data-original-title="Completar el aprendizaje del siguiente grupo de palabras [tecla de acceso: A]">
+                                <i class="ico ico-flower"></i>
+                                Aprender automáticamente
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+        
+    </div>
+    <div class="actions actions-right">
+        
+
+
+
+    
+
+        
+            
+                    <a href="https://community-courses.memrise.com/aprender/review?course_id=6153211&amp;level_index=6" tabindex="1" class="btn btn-light-green" title="" data-tracking-name="level_details_session" data-placement="top" data-original-title="Repasa lo aprendido">
+                        
+                            Repasar 60 palabras
+                        
+                    </a>
+            
+        
+
+    
+
+
+
+    </div>
+
+
+
+    <div class="clear"></div>
+</div>
+
+
+            
+
+                <h4>
+                    60
+                    palabras
+
+                    <span class="pull-right">
+                        
+                            0 ignoradas
+ 
+                    </span>
+                </h4>
+
+            
+
+            
+
+<div class="things clearfix" data-column-a="1" data-column-b="2"><div class="things-header things-row"><a class="ignore-show button mini" title="" data-placement="right" data-original-title="Change whether words appear in learning sessions"><i class="ico ico-settings"></i>
+                Ignorar
+            </a><i class="ico ico-seed ico-purple"></i> Listas para aprender
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="ico ico-water ico-blue"></i> Lista/s para repasar
+        </div><div class="ignore-ui things-row clearfix"><h2>Ignorar palabras</h2><p>
+                Selecciona las casillas para ignorar o dejar de ignorar palabras y haz clic en "Guardar". Las palabras ignoradas no volverán a aparecer en ninguna sesión de aprendizaje.
+            </p><p class="align-right"><a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/6/#" class="ignore-all btn btn-small">
+                    Todo
+                </a><a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/6/#" class="ignore-none btn btn-small">
+                    Ninguna
+                </a></p></div><div class="ignore-ui things-row" style="text-align: right"><strong>¿Ignorar?</strong></div><div class="thing text-text" data-learnable-id="21357708247298" data-thing-id="325892765" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Auto complete</div></div><div class="col_b col text"><div class="text">Tab</div></div></div><div class="thing text-text" data-learnable-id="21357708312834" data-thing-id="325892766" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Beginning of line</div></div><div class="col_b col text"><div class="text">^a</div></div></div><div class="thing text-text" data-learnable-id="21357708378370" data-thing-id="325892767" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">End of line</div></div><div class="col_b col text"><div class="text">^e</div></div></div><div class="thing text-text" data-learnable-id="21357708443906" data-thing-id="325892768" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Forward one character</div></div><div class="col_b col text"><div class="text">^f</div></div></div><div class="thing text-text" data-learnable-id="21357708509442" data-thing-id="325892769" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Back one character</div></div><div class="col_b col text"><div class="text">^b</div></div></div><div class="thing text-text" data-learnable-id="21357708574978" data-thing-id="325892770" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Delete one character (backwards)</div></div><div class="col_b col text"><div class="text">^h</div></div></div><div class="thing text-text" data-learnable-id="21357708640514" data-thing-id="325892771" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Forward one word</div></div><div class="col_b col text"><div class="text">%f</div></div></div><div class="thing text-text" data-learnable-id="21357708706050" data-thing-id="325892772" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Back one word</div></div><div class="col_b col text"><div class="text">%b</div></div></div><div class="thing text-text" data-learnable-id="21357708771586" data-thing-id="325892773" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Delete one word (backwards)</div></div><div class="col_b col text"><div class="text">^w</div></div></div><div class="thing text-text" data-learnable-id="21357708837122" data-thing-id="325892774" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Clear to beginning of line</div></div><div class="col_b col text"><div class="text">^u</div></div></div><div class="thing text-text" data-learnable-id="21357708902658" data-thing-id="325892775" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Clear to end of line</div></div><div class="col_b col text"><div class="text">^k</div></div></div><div class="thing text-text" data-learnable-id="21357708968194" data-thing-id="325892776" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Paste from Kill Ring</div></div><div class="col_b col text"><div class="text">^y</div></div></div><div class="thing text-text" data-learnable-id="21357709033730" data-thing-id="325892777" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Swap cursor with previous character</div></div><div class="col_b col text"><div class="text">^t</div></div></div><div class="thing text-text" data-learnable-id="21357709099266" data-thing-id="325892778" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Swap cursor with previous word</div></div><div class="col_b col text"><div class="text">%t</div></div></div><div class="thing text-text" data-learnable-id="21357709164802" data-thing-id="325892779" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Previous line in history</div></div><div class="col_b col text"><div class="text">^p</div></div></div><div class="thing text-text" data-learnable-id="21357709230338" data-thing-id="325892780" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Next line in history</div></div><div class="col_b col text"><div class="text">^n</div></div></div><div class="thing text-text" data-learnable-id="21357709295874" data-thing-id="325892781" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Search backwards in history</div></div><div class="col_b col text"><div class="text">^r</div></div></div><div class="thing text-text" data-learnable-id="21357709361410" data-thing-id="325892782" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Clear screen</div></div><div class="col_b col text"><div class="text">^l</div></div></div><div class="thing text-text" data-learnable-id="21357709426946" data-thing-id="325892783" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Execute command but keep line</div></div><div class="col_b col text"><div class="text">^o</div></div></div><div class="thing text-text" data-learnable-id="21357709492482" data-thing-id="325892784" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Suspend process</div></div><div class="col_b col text"><div class="text">^z</div></div></div><div class="thing text-text" data-learnable-id="21357709558018" data-thing-id="325892785" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">restore process</div></div><div class="col_b col text"><div class="text">fg</div></div></div><div class="thing text-text" data-learnable-id="21357709623554" data-thing-id="325892786" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">continue process in background</div></div><div class="col_b col text"><div class="text">bg</div></div></div><div class="thing text-text" data-learnable-id="21357709689090" data-thing-id="325892787" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Kill current process</div></div><div class="col_b col text"><div class="text">^c</div></div></div><div class="thing text-text" data-learnable-id="21357709754626" data-thing-id="325892788" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Exit shell</div></div><div class="col_b col text"><div class="text">^d</div></div></div><div class="thing text-text" data-learnable-id="21357709820162" data-thing-id="325892789" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Value of parameter</div></div><div class="col_b col text"><div class="text">${parameter}</div></div></div><div class="thing text-text" data-learnable-id="21357709885698" data-thing-id="325892790" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Use default</div></div><div class="col_b col text"><div class="text">${parameter:-word}</div></div></div><div class="thing text-text" data-learnable-id="21357709951234" data-thing-id="325892791" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Assign default</div></div><div class="col_b col text"><div class="text">${parameter:=word}</div></div></div><div class="thing text-text" data-learnable-id="21357710016770" data-thing-id="325892792" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Display Error</div></div><div class="col_b col text"><div class="text">${parameter:?word}</div></div></div><div class="thing text-text" data-learnable-id="21357710082306" data-thing-id="325892793" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Use Alternate</div></div><div class="col_b col text"><div class="text">${parameter:+word}</div></div></div><div class="thing text-text" data-learnable-id="21357710147842" data-thing-id="325892794" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Substring</div></div><div class="col_b col text"><div class="text">${parameter:offset}</div></div></div><div class="thing text-text" data-learnable-id="21357710213378" data-thing-id="325892795" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">List Array Keys</div></div><div class="col_b col text"><div class="text">${!name[@]}</div></div></div><div class="thing text-text" data-learnable-id="21357710278914" data-thing-id="325892796" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Parameter length</div></div><div class="col_b col text"><div class="text">${#parameter}</div></div></div><div class="thing text-text" data-learnable-id="21357710344450" data-thing-id="325892797" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Remove prefix</div></div><div class="col_b col text"><div class="text">${parameter#match}</div></div></div><div class="thing text-text" data-learnable-id="21357710409986" data-thing-id="325892798" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">(longest)</div></div><div class="col_b col text"><div class="text">${parameter##match}</div></div></div><div class="thing text-text" data-learnable-id="21357710475522" data-thing-id="325892799" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Remove suffix</div></div><div class="col_b col text"><div class="text">${parameter%match}</div></div></div><div class="thing text-text" data-learnable-id="21357710541058" data-thing-id="325892800" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">(longest)</div></div><div class="col_b col text"><div class="text">${parameter%%match}</div></div></div><div class="thing text-text" data-learnable-id="21357710606594" data-thing-id="325892801" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Substitution</div></div><div class="col_b col text"><div class="text">${parameter/pattern/string}</div></div></div><div class="thing text-text" data-learnable-id="21357710672130" data-thing-id="325892802" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Uppercase match</div></div><div class="col_b col text"><div class="text">${parameter^pattern}</div></div></div><div class="thing text-text" data-learnable-id="21357710737666" data-thing-id="325892803" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Uppercase all</div></div><div class="col_b col text"><div class="text">${parameter^^pattern}</div></div></div><div class="thing text-text" data-learnable-id="21357710803202" data-thing-id="325892804" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Lowercase match</div></div><div class="col_b col text"><div class="text">${parameter,pattern}</div></div></div><div class="thing text-text" data-learnable-id="21357710868738" data-thing-id="325892805" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Lowercase all</div></div><div class="col_b col text"><div class="text">${parameter,,pattern}</div></div></div><div class="thing text-text" data-learnable-id="21357710934274" data-thing-id="325892806" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Set label</div></div><div class="col_b col text"><div class="text">:[label] (Sed)</div></div></div><div class="thing text-text" data-learnable-id="21357710999810" data-thing-id="325892807" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print current line number</div></div><div class="col_b col text"><div class="text">=</div></div></div><div class="thing text-text" data-learnable-id="21357711065346" data-thing-id="325892808" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Append text</div></div><div class="col_b col text"><div class="text">a \</div></div></div><div class="thing text-text" data-learnable-id="21357711130882" data-thing-id="325892809" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">(embedded newlines)</div></div><div class="col_b col text"><div class="text">text</div></div></div><div class="thing text-text" data-learnable-id="21357711196418" data-thing-id="325892810" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Jump to label</div></div><div class="col_b col text"><div class="text">b [label]</div></div></div><div class="thing text-text" data-learnable-id="21357711261954" data-thing-id="325892811" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Jump to label on (failed) s///</div></div><div class="col_b col text"><div class="text">t (T) [label]</div></div></div><div class="thing text-text" data-learnable-id="21357711327490" data-thing-id="325892812" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Replace match</div></div><div class="col_b col text"><div class="text">c \</div></div></div><div class="thing text-text" data-learnable-id="21357711393026" data-thing-id="325892813" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Delete (to newline)</div></div><div class="col_b col text"><div class="text">d (D)</div></div></div><div class="thing text-text" data-learnable-id="21357711458562" data-thing-id="325892814" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Copy/Append pattern</div></div><div class="col_b col text"><div class="text">h H</div></div></div><div class="thing text-text" data-learnable-id="21357711524098" data-thing-id="325892815" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Paste/Append hold</div></div><div class="col_b col text"><div class="text">g G</div></div></div><div class="thing text-text" data-learnable-id="21357711589634" data-thing-id="325892816" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Exchange hold/pattern</div></div><div class="col_b col text"><div class="text">x</div></div></div><div class="thing text-text" data-learnable-id="21357711655170" data-thing-id="325892817" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Read/Append next line</div></div><div class="col_b col text"><div class="text">n N</div></div></div><div class="thing text-text" data-learnable-id="21357711720706" data-thing-id="325892818" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print pattern</div></div><div class="col_b col text"><div class="text">p</div></div></div><div class="thing text-text" data-learnable-id="21357711786242" data-thing-id="325892819" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Substitution</div></div><div class="col_b col text"><div class="text">s/regex/replace/</div></div></div><div class="thing text-text" data-learnable-id="21357711851778" data-thing-id="325892820" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Starting at first, every stepth</div></div><div class="col_b col text"><div class="text">first~step</div></div></div><div class="thing text-text" data-learnable-id="21357711917314" data-thing-id="325892821" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Lines matching regex</div></div><div class="col_b col text"><div class="text">/regex/</div></div></div><div class="thing text-text" data-learnable-id="21357711982850" data-thing-id="325892822" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">addr1 and N following lines</div></div><div class="col_b col text"><div class="text">addr1,+N</div></div></div><div class="thing text-text" data-learnable-id="21357712048386" data-thing-id="325892823" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">List of commands</div></div><div class="col_b col text"><div class="text">{c1;c2;c3;}</div></div></div><div class="thing text-text" data-learnable-id="21357712113922" data-thing-id="325892824" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Separate commands</div></div><div class="col_b col text"><div class="text">;</div></div></div><div class="things-footer things-row clearfix"><a class="ignore-save ignore-ui btn pull-right btn-primary btn-large btn-block hide">
+                Guardar
+            </a></div></div>
+
+
+        
+
+    </div>
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+        
+
+<div class="footer-root">
+  <div class="footer-swoosh">
+    <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/swoosh-f90e07ebfb13.svg" alt="">
+  </div>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/about">Acerca de Memrise</a>
+        <a class="footer-link" href="https://www.memrise.com/team">Equipo</a>
+        <a class="footer-link" href="https://www.memrise.com/jobs">Trabaja con nosotros</a>
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://blog.memrise.com/">Blog</a>
+        <a class="footer-link" href="https://engineering.memrise.com/">Blog de programación</a>
+        <a class="footer-link" href="https://www.memrise.com/press">Prensa</a>
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/contact">Escríbenos</a>
+        <a class="footer-link" href="https://memrise.zendesk.com/hc/">Preguntas frecuentes y ayuda</a>
+        
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/dictionary">Phrasebooks</a>
+        
+      </div>
+
+      <div class="footer-links-sub">
+        <a class="footer-link" href="https://www.memrise.com/terms">Condiciones de uso</a>
+        <a class="footer-link" href="https://www.memrise.com/privacy">Política de privacidad</a>
+        <a class="footer-link" href="https://www.memrise.com/cookies">Política de cookies</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo-container">
+        <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/logo-997c4d62a113.svg" alt="Memrise logo">
+      </div>
+      
+      <div class="footer-social-links">
+        <a class="footer-social-link" href="https://www.facebook.com/memrise" target="_blank">
+          <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/facebook-92317b7cfd13.svg" alt="">
+        </a>
+        <a class="footer-social-link" href="https://twitter.com/memrise" target="_blank">
+          <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/twitter-2ca5e163d013.svg" alt="">
+        </a>
+
+        <a class="footer-social-link" href="https://www.youtube.com/channel/UC4Ywz0GYzq7nlPtKCMQ8m0w" target="_blank">
+          <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/youtube-41dd4e237d13.svg" alt="">
+        </a>
+        <a class="footer-social-link" href="https://www.instagram.com/memrise" target="_blank">
+          <img src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/instagram-8842365eb713.svg" alt="">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    
+
+    </div> 
+
+    
+
+    
+
+
+
+
+
+<script type="text/javascript">
+
+    MEMRISE = {
+        DEBUG: false, 
+        STATIC_URL: 'https://static.memrise.com/',
+        REST_API_URL: '/v1.25',
+        DOMAIN: 'https://community-courses.memrise.com',
+        LANG: 'es-mx',
+        csrftoken: "D4nfKa1a0iQQGMTUsrc93m5KR9ajWW22VlIWr4YYQNBFXZtcv8LO01qVEaOTjxe6",
+        ugc_only_site: true,
+        
+        user: {
+            is_authenticated: true
+            
+                ,
+                id: 13994876,
+                username: 'Flyxion',
+                email: 'nateguimondart@gmail.com',
+                profile: {
+                    settings: {},
+                },
+                is_premium: false,
+            
+        },
+        trans: {
+            quitCourse: '\u000A    Aunque dejes este curso, no se borrará tu historial de aprendizaje, pero desaparecerá de tu lista de cursos en la página principal. Puedes volver al curso y restablecer tu progreso cuando quieras,\u000A pero tendrás que encontrarlo en la sección \u0022Cursos\u0022. ¿Seguro que quieres dejarlo?\u000A'
+        },
+        
+        urls: {
+            locale: 'dist/locales/es-mx/translation.json',
+        },
+        
+    };
+</script>
+
+    <script src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/libs-dfea1f72ab13.js.download"></script>
+    <script src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/templates-6fb813771c13.js.download"></script>
+    <script src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/memrise-bundle-b6764e510e13.js.download"></script>
+    
+
+    
+    <script type="text/javascript" src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/course-04297e6d1e13.js.download"></script>
+
+
+    
+
+    <script type="text/javascript" src="./Nivel 6 - Bourne Again Shell - Linux Utilities (no typing) - Memrise_files/level-204d0418ff13.js.download"></script>
+
+
+
+
+<div class="tooltip fade top in" role="tooltip" id="tooltip510604" style="top: 199.017px; left: 814.422px; display: block;"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">Siguiente nivel [Tecla: C]</div></div></body><style class="stylus">/* Apply your custom font globally */
+* {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for web page titles (usually h1 tags) */
+h1, .title, .heading {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for page subtitles (usually h2 tags) */
+h2, .subtitle {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to links */
+a {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to navigation menus */
+nav, .navbar, .menu {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to buttons */
+button, .btn {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to form elements */
+input, textarea, select {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Additional elements that might need custom styling */
+p, span, div, li {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Attempt to style browser-specific elements (experimental) */
+.titlebar, .tab-title {
+    font-family: 'SGA Regular' !important;
+}
+</style></html>

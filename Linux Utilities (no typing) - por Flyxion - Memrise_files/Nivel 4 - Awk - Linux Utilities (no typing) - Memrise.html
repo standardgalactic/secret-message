@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/4/ -->
+<html lang="es-mx" class=" ecjkgdud"><!--<![endif]--><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid:not(.vjs-audio-only-mode) {
+        padding-top: 56.25%
+      }
+    </style><title>
+    
+        Nivel 4 - Awk - Linux Utilities (no typing)
+ 
+ - Memrise</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta property="fb:app_id" content="143688012353890"><meta property="fb:page_id" content="149149908445051"><meta name="theme-color" content="#28A0ED"><meta name="apple-mobile-web-app-capable" content="yes"><meta property="og:site_name" content="Memrise"><meta property="og:title" content="Learn Linux Utilities (no typing) and much more on Memrise"><meta property="twitter:title" content="Learn Linux Utilities (no typing) and much more on Memrise"><meta property="twitter:card" content="summary"><meta name="description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Awk."><meta property="og:description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Awk."><meta property="twitter:description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Awk."><meta property="og:url" content="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/4/"><meta property="og:image" content="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><meta property="twitter:image" content="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><meta property="og:site_name" content="Memrise"><meta name="robots" content="noindex, nofollow"><link href="https://plus.google.com/113645013176360560927/" rel="publisher"><link rel="canonical" href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/4/"><!-- App store banner --><meta name="apple-itunes-app" content="app-id=635966718"><link href="https://plus.google.com/113645013176360560927/" rel="publisher"><link rel="icon" type="image/png" href="https://static.memrise.com/dist/img/favicon-32x32-4b55b2cbec13.png"><link rel="shortcut icon" href="https://static.memrise.com/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="https://static.memrise.com/dist/img/apple-touch-new-logo-icon-0b5d79fcb713.png"><link rel="icon" type="image/png" sizes="512x512" href="https://static.memrise.com/dist/img/android-chrome-512x512-ea3b5d046e13.png"><link rel="icon" type="image/png" sizes="192x192" href="https://static.memrise.com/dist/img/android-chrome-192x192-0e3d590fcd13.png"><link rel="icon" type="image/png" sizes="32x32" href="https://static.memrise.com/dist/img/favicon-32x32-4b55b2cbec13.png"><link rel="icon" type="image/png" sizes="16x16" href="https://static.memrise.com/dist/img/favicon-16x16-2561f293d813.png"><link rel="manifest" href="https://community-courses.memrise.com/manifest.json"><link rel="image_src" href="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><link rel="stylesheet" type="text/css" href="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/bootstrap-bdd16bf5a013.css"><link rel="stylesheet" type="text/css" href="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/web-ab2c615ad013.css"><link rel="stylesheet" type="text/css" href="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/icons-8116badb9a13.css"><link rel="stylesheet" type="text/css" href="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/rebrand-1d13f0f12913.css"><link rel="stylesheet" type="text/css" href="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/course-rebrand-3e74be5e6113.css"><link rel="stylesheet" type="text/css" href="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/level-575df6238013.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700" as="style"><!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://static.memrise.com/dist/css/ie-b99bce0c6d13.css" /><![endif]--><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><style></style></head>
+
+<body class="rebrand reverse-header-ruled level-view" data-course-id="6153211" data-level-id="14163107"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-corporate cc-bottom cc-color-override--1887361321 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies and other technologies to enhance your experience and for web analytics. To find out more or change your choices, view our <a href="https://www.memrise.com/es-mx/cookies">Cookie Policy</a>. By clicking <strong>I agree</strong> you consent to the use of such cookies.</span><a aria-label="allow cookies" role="button" tabindex="0" class="cc-btn cc-allow">I agree</a><!--googleon: all--></div>
+    
+
+    <div class="full-height-container">
+
+    
+        
+
+  <div id="header">
+    <div class="rebrand-header-root">
+      <div class="rebrand-header-container">
+        <a href="https://community-courses.memrise.com/dashboard" title="Inicio">
+          <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/logo-c3ae0edc1913.svg" alt="Memrise logo">
+        </a>
+
+        
+
+        <ul class="header-nav ">
+
+          
+
+            <li class="header-nav-item plain ">
+              <a href="https://community-courses.memrise.com/dashboard" class="nav-item-btn">
+                <span class="nav-item-btn-text">Inicio</span>
+              </a>
+            </li>
+
+          
+
+          <li class="header-nav-item plain is-active">
+            <a href="https://community-courses.memrise.com/es-mx/community/courses/" class="nav-item-btn">
+              <span class="nav-item-btn-text">Cursos</span>
+            </a>
+          </li>
+
+           
+
+            
+              <li class="header-nav-item plain create ">
+                <a href="https://community-courses.memrise.com/groups/" class="nav-item-btn">
+                  <span class="nav-item-btn-text">Grupos</span>
+                </a>
+              </li>
+
+             
+
+            <li class="header-profile-wrapper">
+              <span class="header-info-card js-info-toggle sel-info-toggle">
+                <span class="info-card-inner" accesskey="h">
+                  <span class="info-card-picture">
+                    <img class="profile-avatar" src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/13994876_220524_0151_28.png" alt="">
+                  </span>
+                </span>
+              </span>
+              <span class="header-dropdown-arrow js-info-toggle"></span>
+              
+<div class="header-profile-inner">
+    <div class="profile-row profile-details">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="profile-row profile-links">
+        <a href="https://community-courses.memrise.com/user/Flyxion/" class="profile-link">
+            <i class="profile-link-icon link-icon-1"></i>
+            <span class="profile-link-text">Mi perfil</span>
+        </a>
+        <a href="https://community-courses.memrise.com/settings/" class="profile-link">
+            <i class="profile-link-icon link-icon-2"></i>
+            <span class="profile-link-text">Ajustes</span>
+        </a>
+        <a href="https://community-courses.memrise.com/signout" class="profile-link js-logout sel-logout" data-testid="logout-btn">
+            <i class="profile-link-icon link-icon-3"></i>
+            <span class="profile-link-text">Salir</span>
+        </a>
+    </div>
+</div>
+
+            </li>
+
+           
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+
+        <div id="page-head" class="">
+            <div class="inner">
+                
+    
+
+<div class="course-wrapper">
+    <div class="course-header course-header-slim">
+
+        <div class="slim-course-title">
+            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" class="course-photo">
+                <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/13994876000220216032722.png">
+            </a>
+
+            <div class="course-details">
+
+                <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" accesskey="c">
+                    <h1 class="course-name" itemprop="name" title="Linux Utilities (no typing)">Linux Utilities (no typing)</h1>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="more-info">
+            
+
+<div class="course-creator">
+    
+        <a href="https://community-courses.memrise.com/user/Flyxion/courses/teaching/" class="creator-image thumbnail whitebox thumbnail-s" itemprop="url">
+            <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/13994876_220524_0151_28.png" alt="">
+        </a>
+        <div class="details">
+            <h5 class="created-by">Creado por </h5>
+
+            <a data-role="hovercard" data-user-id="13994876" data-direction="bottom" href="https://community-courses.memrise.com/user/Flyxion/courses/teaching/" rel="author" class="creator-name" itemprop="url">
+                <span itemprop="additionalName">Flyxion</span>
+            </a>
+        </div>
+
+    
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+    
+
+    
+    
+        
+
+<div class="course-tabs-wrap">
+    <div class="container">
+        <div class="left">
+            <ul class="nav nav-pills chromeless">
+                <li>
+                    <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" class="tab">
+                        <i class="ico ico-list"></i>
+                        
+                            Niveles (7)
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="right">
+            
+                <a href="https://community-courses.memrise.com/course/6153211/linux-utilities-no-typing/edit/" class="btn">
+                    <span class="ico ico-edit"></span>
+                    <span class="text">Editar curso</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
+
+    
+
+
+    
+        <div id="content" class="">
+            <div class="container container-main">
+                
+
+    
+        <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/3/" class="level-nav level-nav-prev" accesskey="z" title="" data-placement="top" data-original-title="Nivel previo [Tecla: Z]">
+            <i class="ico ico-left ico-arr-left"></i>
+            <span class="level-name">Nivel 3</span>
+        </a>
+    
+
+    
+        <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/5/" class="level-nav level-nav-next" accesskey="c" title="" data-placement="top" data-original-title="Siguiente nivel [Tecla: C]">
+            <span class="level-name">Nivel 5</span>
+            <i class="ico ico-left ico-arr-right"></i>
+        </a>
+    
+
+    <div class="central-column">
+
+        
+            
+
+<div class="progress-box progress-box-level with-icon">
+
+    
+    <div class="level-icon">
+        <strong class="level-number">
+            
+                Nivel 4
+ 
+
+        </strong>
+        
+    
+        <i class="level-ico level-ico-seed"></i>
+    
+
+    </div>
+    
+
+    <div class="infos">
+        
+            <a class="edit-button button mini" href="https://community-courses.memrise.com/course/6153211/linux-utilities-no-typing/edit/#l_14163107" accesskey="e" title="[Accesskey: E]">
+                <span class="ico ico-s ico-edit"></span>
+                <span class="text">Editar nivel</span>
+            </a>
+        
+
+        
+            <h3 class="progress-box-title">
+                Awk
+            </h3>
+        
+
+        <div class="progress" title="" data-placement="bottom" data-original-title="76% learned">
+            
+                <span class="bar bar-success" style="width: 76%;"></span>
+            
+        </div>
+    </div>
+
+    <hr>
+
+    
+
+    <div class="actions actions-left">
+        
+            <div class="btn-group">
+                <button class="button small dropdown-toggle" data-toggle="dropdown">
+                    <span class="text">Opciones</span>
+                    <span class="ico ico-arr-down"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                        <li>
+                            <a href="https://community-courses.memrise.com/aprender/review?course_id=6153211&amp;level_index=4" title="" data-placement="right" data-tracking-name="level_details_session" accesskey="o" data-original-title="Repasar las palabras vistas [Tecla de acceso: O]">
+                                <i class="ico ico-water"></i>
+                                Repasar
+                            </a>
+                        </li>
+                    
+                    <li>
+                        <a href="https://community-courses.memrise.com/aprender/preview?course_id=6153211&amp;level_index=4" title="" data-placement="right" accesskey="p" data-original-title="Mostrar palabras como presentación [Tecla: P]">
+                            <i class="ico ico-look"></i>
+                            Vista previa
+                        </a>
+                    </li>
+                    
+                        <li>
+                            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/4/#" data-role="level-restart" title="" data-placement="right" data-original-title="Borrar historial de aprendizaje">
+                                <i class="ico ico-loop"></i>
+                                Volver a empezar
+                            </a>
+                        </li>
+                    
+                    
+                    
+                        <li class="divider"></li>
+                        <li>
+                            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/4/#" data-role="auto-learn" title="" data-placement="right" accesskey="a" data-original-title="Completar el aprendizaje del siguiente grupo de palabras [tecla de acceso: A]">
+                                <i class="ico ico-flower"></i>
+                                Aprender automáticamente
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+        
+    </div>
+    <div class="actions actions-right">
+        
+
+
+
+    
+
+        
+            
+                <a href="https://community-courses.memrise.com/aprender/learn?course_id=6153211&amp;level_index=4" tabindex="1" class="btn btn-light-green" title="" data-tracking-name="level_details_session" data-placement="top" data-original-title="Aprender más">
+                    
+                        Continuar aprendiendo
+                    
+                </a>
+                
+                
+        
+
+    
+
+
+
+    </div>
+
+
+
+    <div class="clear"></div>
+</div>
+
+
+            
+
+                <h4>
+                    95
+                    palabras
+
+                    <span class="pull-right">
+                        
+                            0 ignoradas
+ 
+                    </span>
+                </h4>
+
+            
+
+            
+
+<div class="things clearfix" data-column-a="1" data-column-b="2"><div class="things-header things-row"><a class="ignore-show button mini" title="" data-placement="right" data-original-title="Change whether words appear in learning sessions"><i class="ico ico-settings"></i>
+                Ignorar
+            </a><i class="ico ico-seed ico-purple"></i> Listas para aprender
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="ico ico-water ico-blue"></i> Lista/s para repasar
+        </div><div class="ignore-ui things-row clearfix"><h2>Ignorar palabras</h2><p>
+                Selecciona las casillas para ignorar o dejar de ignorar palabras y haz clic en "Guardar". Las palabras ignoradas no volverán a aparecer en ninguna sesión de aprendizaje.
+            </p><p class="align-right"><a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/4/#" class="ignore-all btn btn-small">
+                    Todo
+                </a><a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/4/#" class="ignore-none btn btn-small">
+                    Ninguna
+                </a></p></div><div class="ignore-ui things-row" style="text-align: right"><strong>¿Ignorar?</strong></div><div class="thing text-text" data-learnable-id="21357660340482" data-thing-id="325892034" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">followed by the input field separator(default &lt;space&gt;)</div></div><div class="col_b col text"><div class="text">-F</div></div></div><div class="thing text-text" data-learnable-id="21357677445378" data-thing-id="325892295" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">comment follows to end of line</div></div><div class="col_b col text"><div class="text">#</div></div></div><div class="thing text-text" data-learnable-id="21357677510914" data-thing-id="325892296" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">enclose regular expression</div></div><div class="col_b col text"><div class="text">/ /</div></div></div><div class="thing text-text" data-learnable-id="21357677576450" data-thing-id="325892297" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">enclose action</div></div><div class="col_b col text"><div class="text">{ }</div></div></div><div class="thing text-text" data-learnable-id="21357677641986" data-thing-id="325892298" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">enclose string</div></div><div class="col_b col text"><div class="text">" " (double quotes)</div></div></div><div class="thing text-text" data-learnable-id="21357677707522" data-thing-id="325892299" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">separates commands</div></div><div class="col_b col text"><div class="text">: (colon)</div></div></div><div class="thing text-text" data-learnable-id="21357677773058" data-thing-id="325892300" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">(followed by a number) variable containing input field ($1 for 1st field, $2 for 2nd field, $0 for entire line)</div></div><div class="col_b col text"><div class="text">$</div></div></div><div class="thing text-text" data-learnable-id="21357677838594" data-thing-id="325892301" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">variable containing number of fields</div></div><div class="col_b col text"><div class="text">NF</div></div></div><div class="thing text-text" data-learnable-id="21357677904130" data-thing-id="325892302" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">string pattern matches</div></div><div class="col_b col text"><div class="text">~</div></div></div><div class="thing text-text" data-learnable-id="21357677969666" data-thing-id="325892303" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">string pattern does not match</div></div><div class="col_b col text"><div class="text">!~</div></div></div><div class="thing text-text" data-learnable-id="21357678035202" data-thing-id="325892304" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">writes to STDOUT</div></div><div class="col_b col text"><div class="text">print</div></div></div><div class="thing text-text" data-learnable-id="21357678100738" data-thing-id="325892305" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">returns the number of characters in string</div></div><div class="col_b col text"><div class="text">length(string)</div></div></div><div class="thing text-text" data-learnable-id="21357678166274" data-thing-id="325892306" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">returns part of string from position(starting with 1) of the character to the end</div></div><div class="col_b col text"><div class="text">substr(string,position)</div></div></div><div class="thing text-text" data-learnable-id="21357678231810" data-thing-id="325892307" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">returns part of string from position(starting with 1) of the character to postion + count character</div></div><div class="col_b col text"><div class="text">substr(string,position,count)</div></div></div><div class="thing text-text" data-learnable-id="21357678297346" data-thing-id="325892308" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">substitute string for all occurrences of regexp in $0</div></div><div class="col_b col text"><div class="text">gsub(regexp,string)</div></div></div><div class="thing text-text" data-learnable-id="21357678362882" data-thing-id="325892309" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">substitute string for all ocurrences of regexp in var</div></div><div class="col_b col text"><div class="text">gsub(regexp,string,var)</div></div></div><div class="thing text-text" data-learnable-id="21357678428418" data-thing-id="325892310" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">(in string argument of gsub) characters which matched regexp argument</div></div><div class="col_b col text"><div class="text">&amp;</div></div></div><div class="thing text-text" data-learnable-id="21357678493954" data-thing-id="325892311" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">print the third and first field. field delim :</div></div><div class="col_b col text"><div class="text">awk -F: '{print $3, $1}'</div></div></div><div class="thing text-text" data-learnable-id="21357678559490" data-thing-id="325892312" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">print the first and last field. field delim :</div></div><div class="col_b col text"><div class="text">awk -F: '{print $1, $(NF)}'</div></div></div><div class="thing text-text" data-learnable-id="21357678625026" data-thing-id="325892313" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">print the third and first field if the first field is four characters long. field delim :</div></div><div class="col_b col text"><div class="text">awk -F: '$1 ~ /^....$/ {print $3, $1}'</div></div></div><div class="thing text-text" data-learnable-id="21357678690562" data-thing-id="325892314" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">if the first field is four characters long,print the thrid field + 1000, then the first. field delim :</div></div><div class="col_b col text"><div class="text">awk -F: '$1 ~ /^....$/ {print $3 + 1000, $1}'</div></div></div><div class="thing text-text" data-learnable-id="21357678756098" data-thing-id="325892315" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">if the fourth field equals 100, print the third field plus 1000, then the first field. field delim :</div></div><div class="col_b col text"><div class="text">awk -F: '$4 == 100 {print $3 + 1000, $1}'</div></div></div><div class="thing text-text" data-learnable-id="21357678821634" data-thing-id="325892316" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">if the third field is less than the fourth, print the third then the fourth then the first</div></div><div class="col_b col text"><div class="text">awk -F: '$3 &lt; $4 {print $3, $4, $1}'</div></div></div><div class="thing text-text" data-learnable-id="21357678887170" data-thing-id="325892317" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">if the length of the fifth field is greater than 16 print the whole line</div></div><div class="col_b col text"><div class="text">awk -F: 'length($5) &gt; 16 {print $0}'</div></div></div><div class="thing text-text" data-learnable-id="21357678952706" data-thing-id="325892318" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">substitute d with X and print the line</div></div><div class="col_b col text"><div class="text">awk '{sub("d","X");print $0}'</div></div></div><div class="thing text-text" data-learnable-id="21357661978882" data-thing-id="325892059" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">substitute any lowercase character with X print the line</div></div><div class="col_b col text"><div class="text">awk '{gsub(/[a-z]/,"X");print $0}'</div></div></div><div class="thing text-text" data-learnable-id="21357679018242" data-thing-id="325892319" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">globally substitute any lowercase character with X print the line</div></div><div class="col_b col text"><div class="text">awk '{gsub(/[a-z]/,"X");print $0}'</div></div></div><div class="thing text-text" data-learnable-id="21357679083778" data-thing-id="325892320" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">globally substitute any lowercase character with that letter then X. print the line</div></div><div class="col_b col text"><div class="text">awk '{gsub(/[a-z]/,"&amp;X");print $0}'</div></div></div><div class="thing text-text" data-learnable-id="21357679149314" data-thing-id="325892321" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">print the line from the fifth character on</div></div><div class="col_b col text"><div class="text">awk '{print substr($0,5)}'</div></div></div><div class="thing text-text" data-learnable-id="21357679214850" data-thing-id="325892322" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">print the fifth and sixth characters</div></div><div class="col_b col text"><div class="text">echo $S | awk '{print substr($0,5,2)}'</div></div></div><div class="thing text-text" data-learnable-id="21357679280386" data-thing-id="325892323" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Double space a file</div></div><div class="col_b col text"><div class="text">awk '1;{print ""}'</div></div></div><div class="thing text-text" data-learnable-id="21357679345922" data-thing-id="325892324" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Double space a file which already has blank lines in it. Output file should contain no more than one blank line between lines of text.</div></div><div class="col_b col text"><div class="text">awk 'NF{print $0 "\n"}'</div></div></div><div class="thing text-text" data-learnable-id="21357679411458" data-thing-id="325892325" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Triple space a file</div></div><div class="col_b col text"><div class="text">awk '1;{print "\n"}'</div></div></div><div class="thing text-text" data-learnable-id="21357679476994" data-thing-id="325892326" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Precede each line by its line number FOR THAT FILE (left alignment). Using a tab (\t) instead of space will preserve margins.</div></div><div class="col_b col text"><div class="text">awk '{print FNR "\t" $0}' files*</div></div></div><div class="thing text-text" data-learnable-id="21357679542530" data-thing-id="325892327" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Precede each line by its line number FOR ALL FILES TOGETHER, with tab.</div></div><div class="col_b col text"><div class="text">awk '{print NR "\t" $0}' files*</div></div></div><div class="thing text-text" data-learnable-id="21357679608066" data-thing-id="325892328" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Number each line of a file (number on left, right-aligned)</div></div><div class="col_b col text"><div class="text">awk '{printf("%5d : %s\n", NR,$0)}'</div></div></div><div class="thing text-text" data-learnable-id="21357679673602" data-thing-id="325892329" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Number each line of file, but only print numbers if line is not blank. Remember caveats about Unix treatment of \r (mentioned above)</div></div><div class="col_b col text"><div class="text">awk 'NF{$0=++a " :" $0};1'</div></div></div><div class="thing text-text" data-learnable-id="21357679739138" data-thing-id="325892330" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Count lines (emulates "wc -l")</div></div><div class="col_b col text"><div class="text">awk 'END{print NR}'</div></div></div><div class="thing text-text" data-learnable-id="21357679804674" data-thing-id="325892331" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the sums of the fields of every line</div></div><div class="col_b col text"><div class="text">awk '{s=0; for (i=1; i&lt;=NF; i++) s=s+$i; print s}'</div></div></div><div class="thing text-text" data-learnable-id="21357679870210" data-thing-id="325892332" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Add all fields in all lines and print the sum</div></div><div class="col_b col text"><div class="text">awk '{for (i=1; i&lt;=NF; i++) s=s+$i}; END{print s}'</div></div></div><div class="thing text-text" data-learnable-id="21357679935746" data-thing-id="325892333" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print every line after replacing each field with its absolute value</div></div><div class="col_b col text"><div class="text">awk '{for (i=1; i&lt;=NF; i++) if ($i &lt; 0) $i = -$i; print }'</div></div></div><div class="thing text-text" data-learnable-id="21357680001282" data-thing-id="325892334" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the total number of fields ("words") in all lines</div></div><div class="col_b col text"><div class="text">awk '{ total = total + NF }; END {print total}' file</div></div></div><div class="thing text-text" data-learnable-id="21357680066818" data-thing-id="325892335" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the total number of lines that contain "Beth"</div></div><div class="col_b col text"><div class="text">awk '/Beth/{n++}; END {print n+0}' file</div></div></div><div class="thing text-text" data-learnable-id="21357680132354" data-thing-id="325892336" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the largest first field and the line that contains it. Intended for finding the longest string in field #1</div></div><div class="col_b col text"><div class="text">awk '$1 &gt; max {max=$1; maxline=$0}; END{ print max, maxline}'</div></div></div><div class="thing text-text" data-learnable-id="21357680197890" data-thing-id="325892337" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the number of fields in each line, followed by the line</div></div><div class="col_b col text"><div class="text">awk '{ print NF ":" $0 } '</div></div></div><div class="thing text-text" data-learnable-id="21357680263426" data-thing-id="325892338" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the last field of each line</div></div><div class="col_b col text"><div class="text">awk '{ print $NF }'</div></div></div><div class="thing text-text" data-learnable-id="21357680328962" data-thing-id="325892339" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the last field of the last line</div></div><div class="col_b col text"><div class="text">awk '{ field = $NF }; END{ print field }'</div></div></div><div class="thing text-text" data-learnable-id="21357680394498" data-thing-id="325892340" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print every line with more than 4 fields</div></div><div class="col_b col text"><div class="text">awk 'NF &gt; 4'</div></div></div><div class="thing text-text" data-learnable-id="21357680460034" data-thing-id="325892341" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print every line where the value of the last field is &gt; 4</div></div><div class="col_b col text"><div class="text">awk '$NF &gt; 4'</div></div></div><div class="thing text-text" data-learnable-id="21357680525570" data-thing-id="325892342" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Create a string of a specific length (e.g., generate 513 spaces)</div></div><div class="col_b col text"><div class="text">awk 'BEGIN{while (a++&lt;513) s=s " "; print s}'</div></div></div><div class="thing text-text" data-learnable-id="21357680591106" data-thing-id="325892343" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Insert a string of specific length at a certain character position.Example: insert 49 spaces after column #6 of each input line.</div></div><div class="col_b col text"><div class="text">gawk --re-interval 'BEGIN{while(a++&lt;49)s=s " "};{sub(/^.{6}/,"&amp;" s)};1'</div></div></div><div class="thing text-text" data-learnable-id="21357680656642" data-thing-id="325892344" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Create an array named "month", indexed by numbers, so that month[1] is 'Jan', month[2] is 'Feb', month[3] is 'Mar' and so on.</div></div><div class="col_b col text"><div class="text">split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", month, " ")</div></div></div><div class="thing text-text" data-learnable-id="21357680787714" data-thing-id="325892346" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Create an array named "mdigit", indexed by strings, so that mdigit["Jan"] is 1, mdigit["Feb"] is 2, etc. Requires "month" array</div></div><div class="col_b col text"><div class="text">for (i=1; i&lt;=12; i++) mdigit[month[i]] = i</div></div></div><div class="thing text-text" data-learnable-id="21357680853250" data-thing-id="325892347" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">IN UNIX ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format</div></div><div class="col_b col text"><div class="text">awk '{sub(/\r$/,"")};1' # assumes EACH line ends with Ctrl-M</div></div></div><div class="thing text-text" data-learnable-id="21357680918786" data-thing-id="325892348" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">IN UNIX ENVIRONMENT: convert Unix newlines (LF) to DOS format</div></div><div class="col_b col text"><div class="text">awk '{sub(/$/,"\r")};1'</div></div></div><div class="thing text-text" data-learnable-id="21357680984322" data-thing-id="325892349" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Delete leading whitespace (spaces, tabs) from front of each line aligns all text flush left</div></div><div class="col_b col text"><div class="text">awk '{sub(/^[ \t]+/, "")};1'</div></div></div><div class="thing text-text" data-learnable-id="21357681049858" data-thing-id="325892350" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Delete trailing whitespace (spaces, tabs) from end of each line</div></div><div class="col_b col text"><div class="text">awk '{sub(/[ \t]+$/, "")};1'</div></div></div><div class="thing text-text" data-learnable-id="21357681115394" data-thing-id="325892351" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Delete BOTH leading and trailing whitespace from each line</div></div><div class="col_b col text"><div class="text">awk '{gsub(/^[ \t]+|[ \t]+$/,"")};1'</div></div></div><div class="thing text-text" data-learnable-id="21357681180930" data-thing-id="325892352" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Insert 5 blank spaces at beginning of each line (make page offset)</div></div><div class="col_b col text"><div class="text">awk '{sub(/^/, " ")};1'</div></div></div><div class="thing text-text" data-learnable-id="21357681246466" data-thing-id="325892353" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Align all text flush right on a 79-column width</div></div><div class="col_b col text"><div class="text">awk '{printf "%79s\n", $0}' file*</div></div></div><div class="thing text-text" data-learnable-id="21357681312002" data-thing-id="325892354" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Center all text on a 79-character width</div></div><div class="col_b col text"><div class="text">awk '{l=length();s=int((79-l)/2); printf "%"(s+l)"s\n",$0}' file*</div></div></div><div class="thing text-text" data-learnable-id="21357681377538" data-thing-id="325892355" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Substitute (find and replace) "foo" with "bar" on each line</div></div><div class="col_b col text"><div class="text">awk '{sub(/foo/,"bar")}; 1' # replace only 1st instance</div></div></div><div class="thing text-text" data-learnable-id="21357681443074" data-thing-id="325892356" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Substitute "foo" with "bar" ONLY for lines which contain "baz"</div></div><div class="col_b col text"><div class="text">awk '/baz/{gsub(/foo/, "bar")}; 1'</div></div></div><div class="thing text-text" data-learnable-id="21357681508610" data-thing-id="325892357" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Substitute "foo" with "bar" EXCEPT for lines which contain "baz"</div></div><div class="col_b col text"><div class="text">awk '!/baz/{gsub(/foo/, "bar")}; 1'</div></div></div><div class="thing text-text" data-learnable-id="21357681574146" data-thing-id="325892358" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Change "scarlet" or "ruby" or "puce" to "red"</div></div><div class="col_b col text"><div class="text">awk '{gsub(/scarlet|ruby|puce/, "red")}; 1'</div></div></div><div class="thing text-text" data-learnable-id="21357681639682" data-thing-id="325892359" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Reverse order of lines (emulates "tac")</div></div><div class="col_b col text"><div class="text">awk '{a[i++]=$0} END {for (j=i-1; j&gt;=0;) print a[j--] }' file*</div></div></div><div class="thing text-text" data-learnable-id="21357681705218" data-thing-id="325892360" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">If a line ends with a backslash, append the next line to it (fails if there are multiple lines ending with backslash...)</div></div><div class="col_b col text"><div class="text">awk '/\\$/ {sub(/\\$/,""); getline t; print $0 t; next}; 1' file*</div></div></div><div class="thing text-text" data-learnable-id="21357681770754" data-thing-id="325892361" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print and sort the login names of all users</div></div><div class="col_b col text"><div class="text">awk -F ":" '{print $1 | "sort" }' /etc/passwd</div></div></div><div class="thing text-text" data-learnable-id="21357681836290" data-thing-id="325892362" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the first 2 fields, in opposite order, of every line</div></div><div class="col_b col text"><div class="text">awk '{print $2, $1}' file</div></div></div><div class="thing text-text" data-learnable-id="21357681901826" data-thing-id="325892363" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Switch the first 2 fields of every line</div></div><div class="col_b col text"><div class="text">awk '{temp = $1; $1 = $2; $2 = temp}' file</div></div></div><div class="thing text-text" data-learnable-id="21357681967362" data-thing-id="325892364" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print every line, deleting the second field of that line</div></div><div class="col_b col text"><div class="text">awk '{ $2 = ""; print }'</div></div></div><div class="thing text-text" data-learnable-id="21357682032898" data-thing-id="325892365" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print in reverse order the fields of every line</div></div><div class="col_b col text"><div class="text">awk '{for (i=NF; i&gt;0; i--) printf("%s ",$i);print ""}' file</div></div></div><div class="thing text-text" data-learnable-id="21357682098434" data-thing-id="325892366" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Concatenate every 5 lines of input, using a comma separator between fields</div></div><div class="col_b col text"><div class="text">awk 'ORS=NR%5?",":"\n"' file</div></div></div><div class="thing text-text" data-learnable-id="21357682163970" data-thing-id="325892367" data-initial-ignore="0"><div class="thinguser"><div class="progress"><div class="bar bar-success" style="width:66%"></div></div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print first 10 lines of file (emulates behavior of "head")</div></div><div class="col_b col text"><div class="text">awk 'NR &lt; 11'</div></div></div><div class="thing text-text" data-learnable-id="21357682229506" data-thing-id="325892368" data-initial-ignore="0"><div class="thinguser"><div class="progress"><div class="bar bar-success" style="width:33%"></div></div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print first line of file (emulates "head -1")</div></div><div class="col_b col text"><div class="text">awk 'NR&gt;1{exit};1'</div></div></div><div class="thing text-text" data-learnable-id="21357682295042" data-thing-id="325892369" data-initial-ignore="0"><div class="thinguser"><div class="progress"><div class="bar bar-success" style="width:33%"></div></div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the last 2 lines of a file (emulates "tail -2")</div></div><div class="col_b col text"><div class="text">awk '{y=x "\n" $0; x=$0};END{print y}'</div></div></div><div class="thing text-text" data-learnable-id="21357682360578" data-thing-id="325892370" data-initial-ignore="0"><div class="thinguser"><div class="progress"><div class="bar bar-success" style="width:16%"></div></div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the last line of a file (emulates "tail -1")</div></div><div class="col_b col text"><div class="text">awk 'END{print}'</div></div></div><div class="thing text-text" data-learnable-id="21357682426114" data-thing-id="325892371" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print only lines which match regular expression (emulates "grep")</div></div><div class="col_b col text"><div class="text">awk '/regex/'</div></div></div><div class="thing text-text" data-learnable-id="21357682491650" data-thing-id="325892372" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print only lines which do NOT match regex (emulates "grep -v")</div></div><div class="col_b col text"><div class="text">awk '!/regex/'</div></div></div><div class="thing text-text" data-learnable-id="21357682557186" data-thing-id="325892373" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print any line where field #5 is equal to "abc123"</div></div><div class="col_b col text"><div class="text">awk '$5 == "abc123"'</div></div></div><div class="thing text-text" data-learnable-id="21357682622722" data-thing-id="325892374" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print only those lines where field #5 is NOT equal to "abc123". This will also print lines which have less than 5 fields.</div></div><div class="col_b col text"><div class="text">awk '$5 != "abc123"'</div></div></div><div class="thing text-text" data-learnable-id="21357682688258" data-thing-id="325892375" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Matching a field against a regular expression</div></div><div class="col_b col text"><div class="text">awk '$7 ~ /^[a-f]/' # print line if field #7 matches regex</div></div></div><div class="thing text-text" data-learnable-id="21357682753794" data-thing-id="325892376" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the line immediately before a regex, but not the line containing the regex</div></div><div class="col_b col text"><div class="text">awk '/regex/{print x};{x=$0}'</div></div></div><div class="thing text-text" data-learnable-id="21357682819330" data-thing-id="325892377" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print the line immediately after a regex, but not the line containing the regex</div></div><div class="col_b col text"><div class="text">awk '/regex/{getline;print}'</div></div></div><div class="thing text-text" data-learnable-id="21357682884866" data-thing-id="325892378" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Grep for AAA and BBB and CCC (in any order on the same line)</div></div><div class="col_b col text"><div class="text">awk '/AAA/ &amp;&amp; /BBB/ &amp;&amp; /CCC/'</div></div></div><div class="thing text-text" data-learnable-id="21357682950402" data-thing-id="325892379" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Grep for AAA and BBB and CCC (in that order)</div></div><div class="col_b col text"><div class="text">awk '/AAA.*BBB.*CCC/'</div></div></div><div class="thing text-text" data-learnable-id="21357683015938" data-thing-id="325892380" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print only lines of 65 characters or longer</div></div><div class="col_b col text"><div class="text">awk 'length &gt; 64'</div></div></div><div class="thing text-text" data-learnable-id="21357683081474" data-thing-id="325892381" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print only lines of less than 65 characters</div></div><div class="col_b col text"><div class="text">awk 'length &lt; 64'</div></div></div><div class="thing text-text" data-learnable-id="21357683147010" data-thing-id="325892382" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print section of file from regular expression to end of file</div></div><div class="col_b col text"><div class="text">awk '/regex/,0'</div></div></div><div class="thing text-text" data-learnable-id="21357683212546" data-thing-id="325892383" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print section of file based on line numbers (lines 8-12, inclusive)</div></div><div class="col_b col text"><div class="text">awk 'NR==8,NR==12'</div></div></div><div class="thing text-text" data-learnable-id="21357683278082" data-thing-id="325892384" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print line number 52</div></div><div class="col_b col text"><div class="text">awk 'NR==52'</div></div></div><div class="thing text-text" data-learnable-id="21357683343618" data-thing-id="325892385" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Print section of file between two regular expressions (inclusive)</div></div><div class="col_b col text"><div class="text">awk '/Iowa/,/Montana/' (case sensitive)</div></div></div><div class="thing text-text" data-learnable-id="21357683409154" data-thing-id="325892386" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Delete ALL blank lines from a file (same as "grep '.' ")</div></div><div class="col_b col text"><div class="text">awk NF</div></div></div><div class="thing text-text" data-learnable-id="21357683474690" data-thing-id="325892387" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Remove duplicate, consecutive lines (emulates "uniq")</div></div><div class="col_b col text"><div class="text">awk 'a !~ $0; {a=$0}'</div></div></div><div class="thing text-text" data-learnable-id="21357683540226" data-thing-id="325892388" data-initial-ignore=""><div class="thinguser"><i class="ico ico-seed ico-purple"></i></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">Remove duplicate, nonconsecutive lines</div></div><div class="col_b col text"><div class="text">awk '!a[$0]++' # most concise script</div></div></div><div class="things-footer things-row clearfix"><a class="ignore-save ignore-ui btn pull-right btn-primary btn-large btn-block hide">
+                Guardar
+            </a></div></div>
+
+
+        
+
+    </div>
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+        
+
+<div class="footer-root">
+  <div class="footer-swoosh">
+    <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/swoosh-f90e07ebfb13.svg" alt="">
+  </div>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/about">Acerca de Memrise</a>
+        <a class="footer-link" href="https://www.memrise.com/team">Equipo</a>
+        <a class="footer-link" href="https://www.memrise.com/jobs">Trabaja con nosotros</a>
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://blog.memrise.com/">Blog</a>
+        <a class="footer-link" href="https://engineering.memrise.com/">Blog de programación</a>
+        <a class="footer-link" href="https://www.memrise.com/press">Prensa</a>
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/contact">Escríbenos</a>
+        <a class="footer-link" href="https://memrise.zendesk.com/hc/">Preguntas frecuentes y ayuda</a>
+        
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/dictionary">Phrasebooks</a>
+        
+      </div>
+
+      <div class="footer-links-sub">
+        <a class="footer-link" href="https://www.memrise.com/terms">Condiciones de uso</a>
+        <a class="footer-link" href="https://www.memrise.com/privacy">Política de privacidad</a>
+        <a class="footer-link" href="https://www.memrise.com/cookies">Política de cookies</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo-container">
+        <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/logo-997c4d62a113.svg" alt="Memrise logo">
+      </div>
+      
+      <div class="footer-social-links">
+        <a class="footer-social-link" href="https://www.facebook.com/memrise" target="_blank">
+          <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/facebook-92317b7cfd13.svg" alt="">
+        </a>
+        <a class="footer-social-link" href="https://twitter.com/memrise" target="_blank">
+          <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/twitter-2ca5e163d013.svg" alt="">
+        </a>
+
+        <a class="footer-social-link" href="https://www.youtube.com/channel/UC4Ywz0GYzq7nlPtKCMQ8m0w" target="_blank">
+          <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/youtube-41dd4e237d13.svg" alt="">
+        </a>
+        <a class="footer-social-link" href="https://www.instagram.com/memrise" target="_blank">
+          <img src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/instagram-8842365eb713.svg" alt="">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    
+
+    </div> 
+
+    
+
+    
+
+
+
+
+
+<script type="text/javascript">
+
+    MEMRISE = {
+        DEBUG: false, 
+        STATIC_URL: 'https://static.memrise.com/',
+        REST_API_URL: '/v1.25',
+        DOMAIN: 'https://community-courses.memrise.com',
+        LANG: 'es-mx',
+        csrftoken: "WpkF6weRCPik77a7eO3EkiiGHc2pJHqceGFmNqbFsk39okKphvCjhXDRudGZ6iCg",
+        ugc_only_site: true,
+        
+        user: {
+            is_authenticated: true
+            
+                ,
+                id: 13994876,
+                username: 'Flyxion',
+                email: 'nateguimondart@gmail.com',
+                profile: {
+                    settings: {},
+                },
+                is_premium: false,
+            
+        },
+        trans: {
+            quitCourse: '\u000A    Aunque dejes este curso, no se borrará tu historial de aprendizaje, pero desaparecerá de tu lista de cursos en la página principal. Puedes volver al curso y restablecer tu progreso cuando quieras,\u000A pero tendrás que encontrarlo en la sección \u0022Cursos\u0022. ¿Seguro que quieres dejarlo?\u000A'
+        },
+        
+        urls: {
+            locale: 'dist/locales/es-mx/translation.json',
+        },
+        
+    };
+</script>
+
+    <script src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/libs-dfea1f72ab13.js.download"></script>
+    <script src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/templates-6fb813771c13.js.download"></script>
+    <script src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/memrise-bundle-b6764e510e13.js.download"></script>
+    
+
+    
+    <script type="text/javascript" src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/course-04297e6d1e13.js.download"></script>
+
+
+    
+
+    <script type="text/javascript" src="./Nivel 4 - Awk - Linux Utilities (no typing) - Memrise_files/level-204d0418ff13.js.download"></script>
+
+
+
+
+</body><style class="stylus">/* Apply your custom font globally */
+* {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for web page titles (usually h1 tags) */
+h1, .title, .heading {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for page subtitles (usually h2 tags) */
+h2, .subtitle {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to links */
+a {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to navigation menus */
+nav, .navbar, .menu {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to buttons */
+button, .btn {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to form elements */
+input, textarea, select {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Additional elements that might need custom styling */
+p, span, div, li {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Attempt to style browser-specific elements (experimental) */
+.titlebar, .tab-title {
+    font-family: 'SGA Regular' !important;
+}
+</style></html>

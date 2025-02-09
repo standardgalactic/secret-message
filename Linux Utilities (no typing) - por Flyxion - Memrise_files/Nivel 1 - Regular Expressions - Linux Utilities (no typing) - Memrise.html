@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/1/ -->
+<html lang="es-mx" class=" ujfwugb"><!--<![endif]--><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid:not(.vjs-audio-only-mode) {
+        padding-top: 56.25%
+      }
+    </style><title>
+    
+        Nivel 1 - Regular Expressions - Linux Utilities (no typing)
+ 
+ - Memrise</title><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta property="fb:app_id" content="143688012353890"><meta property="fb:page_id" content="149149908445051"><meta name="theme-color" content="#28A0ED"><meta name="apple-mobile-web-app-capable" content="yes"><meta property="og:site_name" content="Memrise"><meta property="og:title" content="Learn Linux Utilities (no typing) and much more on Memrise"><meta property="twitter:title" content="Learn Linux Utilities (no typing) and much more on Memrise"><meta property="twitter:card" content="summary"><meta name="description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Regular Expressions."><meta property="og:description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Regular Expressions."><meta property="twitter:description" content="Learn linux command line utilities. Grep, regex, sed, and awk. Regular Expressions."><meta property="og:url" content="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/1/"><meta property="og:image" content="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><meta property="twitter:image" content="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><meta property="og:site_name" content="Memrise"><meta name="robots" content="noindex, nofollow"><link href="https://plus.google.com/113645013176360560927/" rel="publisher"><link rel="canonical" href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/1/"><!-- App store banner --><meta name="apple-itunes-app" content="app-id=635966718"><link href="https://plus.google.com/113645013176360560927/" rel="publisher"><link rel="icon" type="image/png" href="https://static.memrise.com/dist/img/favicon-32x32-4b55b2cbec13.png"><link rel="shortcut icon" href="https://static.memrise.com/img/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="https://static.memrise.com/dist/img/apple-touch-new-logo-icon-0b5d79fcb713.png"><link rel="icon" type="image/png" sizes="512x512" href="https://static.memrise.com/dist/img/android-chrome-512x512-ea3b5d046e13.png"><link rel="icon" type="image/png" sizes="192x192" href="https://static.memrise.com/dist/img/android-chrome-192x192-0e3d590fcd13.png"><link rel="icon" type="image/png" sizes="32x32" href="https://static.memrise.com/dist/img/favicon-32x32-4b55b2cbec13.png"><link rel="icon" type="image/png" sizes="16x16" href="https://static.memrise.com/dist/img/favicon-16x16-2561f293d813.png"><link rel="manifest" href="https://community-courses.memrise.com/manifest.json"><link rel="image_src" href="https://static.memrise.com/img/400sqf/from/uploads/course_photos/13994876000220216032722.png"><link rel="stylesheet" type="text/css" href="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/bootstrap-bdd16bf5a013.css"><link rel="stylesheet" type="text/css" href="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/web-ab2c615ad013.css"><link rel="stylesheet" type="text/css" href="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/icons-8116badb9a13.css"><link rel="stylesheet" type="text/css" href="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/rebrand-1d13f0f12913.css"><link rel="stylesheet" type="text/css" href="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/course-rebrand-3e74be5e6113.css"><link rel="stylesheet" type="text/css" href="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/level-575df6238013.css"><link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700" as="style"><!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://static.memrise.com/dist/css/ie-b99bce0c6d13.css" /><![endif]--><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><style></style></head>
+
+<body class="rebrand reverse-header-ruled level-view" data-course-id="6153211" data-level-id="14163068"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-corporate cc-bottom cc-color-override--1887361321 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies and other technologies to enhance your experience and for web analytics. To find out more or change your choices, view our <a href="https://www.memrise.com/es-mx/cookies">Cookie Policy</a>. By clicking <strong>I agree</strong> you consent to the use of such cookies.</span><a aria-label="allow cookies" role="button" tabindex="0" class="cc-btn cc-allow">I agree</a><!--googleon: all--></div>
+    
+
+    <div class="full-height-container">
+
+    
+        
+
+  <div id="header">
+    <div class="rebrand-header-root">
+      <div class="rebrand-header-container">
+        <a href="https://community-courses.memrise.com/dashboard" title="Inicio">
+          <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/logo-c3ae0edc1913.svg" alt="Memrise logo">
+        </a>
+
+        
+
+        <ul class="header-nav ">
+
+          
+
+            <li class="header-nav-item plain ">
+              <a href="https://community-courses.memrise.com/dashboard" class="nav-item-btn">
+                <span class="nav-item-btn-text">Inicio</span>
+              </a>
+            </li>
+
+          
+
+          <li class="header-nav-item plain is-active">
+            <a href="https://community-courses.memrise.com/es-mx/community/courses/" class="nav-item-btn">
+              <span class="nav-item-btn-text">Cursos</span>
+            </a>
+          </li>
+
+           
+
+            
+              <li class="header-nav-item plain create ">
+                <a href="https://community-courses.memrise.com/groups/" class="nav-item-btn">
+                  <span class="nav-item-btn-text">Grupos</span>
+                </a>
+              </li>
+
+             
+
+            <li class="header-profile-wrapper">
+              <span class="header-info-card js-info-toggle sel-info-toggle">
+                <span class="info-card-inner" accesskey="h">
+                  <span class="info-card-picture">
+                    <img class="profile-avatar" src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/13994876_220524_0151_28.png" alt="">
+                  </span>
+                </span>
+              </span>
+              <span class="header-dropdown-arrow js-info-toggle"></span>
+              
+<div class="header-profile-inner">
+    <div class="profile-row profile-details">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="profile-row profile-links">
+        <a href="https://community-courses.memrise.com/user/Flyxion/" class="profile-link">
+            <i class="profile-link-icon link-icon-1"></i>
+            <span class="profile-link-text">Mi perfil</span>
+        </a>
+        <a href="https://community-courses.memrise.com/settings/" class="profile-link">
+            <i class="profile-link-icon link-icon-2"></i>
+            <span class="profile-link-text">Ajustes</span>
+        </a>
+        <a href="https://community-courses.memrise.com/signout" class="profile-link js-logout sel-logout" data-testid="logout-btn">
+            <i class="profile-link-icon link-icon-3"></i>
+            <span class="profile-link-text">Salir</span>
+        </a>
+    </div>
+</div>
+
+            </li>
+
+           
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+
+        <div id="page-head" class="">
+            <div class="inner">
+                
+    
+
+<div class="course-wrapper">
+    <div class="course-header course-header-slim">
+
+        <div class="slim-course-title">
+            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" class="course-photo">
+                <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/13994876000220216032722.png">
+            </a>
+
+            <div class="course-details">
+
+                <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" accesskey="c">
+                    <h1 class="course-name" itemprop="name" title="Linux Utilities (no typing)">Linux Utilities (no typing)</h1>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="more-info">
+            
+
+<div class="course-creator">
+    
+        <a href="https://community-courses.memrise.com/user/Flyxion/courses/teaching/" class="creator-image thumbnail whitebox thumbnail-s" itemprop="url">
+            <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/13994876_220524_0151_28.png" alt="">
+        </a>
+        <div class="details">
+            <h5 class="created-by">Creado por </h5>
+
+            <a data-role="hovercard" data-user-id="13994876" data-direction="bottom" href="https://community-courses.memrise.com/user/Flyxion/courses/teaching/" rel="author" class="creator-name" itemprop="url">
+                <span itemprop="additionalName">Flyxion</span>
+            </a>
+        </div>
+
+    
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+    
+
+    
+    
+        
+
+<div class="course-tabs-wrap">
+    <div class="container">
+        <div class="left">
+            <ul class="nav nav-pills chromeless">
+                <li>
+                    <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/" class="tab">
+                        <i class="ico ico-list"></i>
+                        
+                            Niveles (7)
+                        
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="right">
+            
+                <a href="https://community-courses.memrise.com/course/6153211/linux-utilities-no-typing/edit/" class="btn">
+                    <span class="ico ico-edit"></span>
+                    <span class="text">Editar curso</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
+
+    
+
+
+    
+        <div id="content" class="">
+            <div class="container container-main">
+                
+
+    
+
+    
+        <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/2/" class="level-nav level-nav-next" accesskey="c" title="" data-placement="top" data-original-title="Siguiente nivel [Tecla: C]">
+            <span class="level-name">Nivel 2</span>
+            <i class="ico ico-left ico-arr-right"></i>
+        </a>
+    
+
+    <div class="central-column">
+
+        
+            
+
+<div class="progress-box progress-box-level with-icon">
+
+    
+    <div class="level-icon">
+        <strong class="level-number">
+            
+                Nivel 1
+ 
+
+        </strong>
+        
+    
+        <i class="level-ico level-ico-plant"></i>
+    
+
+    </div>
+    
+
+    <div class="infos">
+        
+            <a class="edit-button button mini" href="https://community-courses.memrise.com/course/6153211/linux-utilities-no-typing/edit/#l_14163068" accesskey="e" title="[Accesskey: E]">
+                <span class="ico ico-s ico-edit"></span>
+                <span class="text">Editar nivel</span>
+            </a>
+        
+
+        
+            <h3 class="progress-box-title">
+                Regular Expressions
+            </h3>
+        
+
+        <div class="progress" title="" data-placement="bottom" data-original-title="100% learned">
+            
+                <span class="bar bar-success" style="width: 100%;"></span>
+            
+        </div>
+    </div>
+
+    <hr>
+
+    
+
+    <div class="actions actions-left">
+        
+            <div class="btn-group">
+                <button class="button small dropdown-toggle" data-toggle="dropdown">
+                    <span class="text">Opciones</span>
+                    <span class="ico ico-arr-down"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                        <li>
+                            <a href="https://community-courses.memrise.com/aprender/review?course_id=6153211&amp;level_index=1" title="" data-placement="right" data-tracking-name="level_details_session" accesskey="o" data-original-title="Repasar las palabras vistas [Tecla de acceso: O]">
+                                <i class="ico ico-water"></i>
+                                Repasar
+                            </a>
+                        </li>
+                    
+                    <li>
+                        <a href="https://community-courses.memrise.com/aprender/preview?course_id=6153211&amp;level_index=1" title="" data-placement="right" accesskey="p" data-original-title="Mostrar palabras como presentación [Tecla: P]">
+                            <i class="ico ico-look"></i>
+                            Vista previa
+                        </a>
+                    </li>
+                    
+                        <li>
+                            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/1/#" data-role="level-restart" title="" data-placement="right" data-original-title="Borrar historial de aprendizaje">
+                                <i class="ico ico-loop"></i>
+                                Volver a empezar
+                            </a>
+                        </li>
+                    
+                    
+                    
+                        <li class="divider"></li>
+                        <li>
+                            <a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/1/#" data-role="auto-learn" title="" data-placement="right" accesskey="a" data-original-title="Completar el aprendizaje del siguiente grupo de palabras [tecla de acceso: A]">
+                                <i class="ico ico-flower"></i>
+                                Aprender automáticamente
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+        
+    </div>
+    <div class="actions actions-right">
+        
+
+
+
+    
+
+        
+            
+                    <a href="https://community-courses.memrise.com/aprender/review?course_id=6153211&amp;level_index=1" tabindex="1" class="btn btn-light-green" title="" data-tracking-name="level_details_session" data-placement="top" data-original-title="Repasa lo aprendido">
+                        
+                            Repasar 75 palabras
+                        
+                    </a>
+            
+        
+
+    
+
+
+
+    </div>
+
+
+
+    <div class="clear"></div>
+</div>
+
+
+            
+
+                <h4>
+                    75
+                    palabras
+
+                    <span class="pull-right">
+                        
+                            0 ignoradas
+ 
+                    </span>
+                </h4>
+
+            
+
+            
+
+<div class="things clearfix" data-column-a="2" data-column-b="1"><div class="things-header things-row"><a class="ignore-show button mini" title="" data-placement="right" data-original-title="Change whether words appear in learning sessions"><i class="ico ico-settings"></i>
+                Ignorar
+            </a><i class="ico ico-seed ico-purple"></i> Listas para aprender
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="ico ico-water ico-blue"></i> Lista/s para repasar
+        </div><div class="ignore-ui things-row clearfix"><h2>Ignorar palabras</h2><p>
+                Selecciona las casillas para ignorar o dejar de ignorar palabras y haz clic en "Guardar". Las palabras ignoradas no volverán a aparecer en ninguna sesión de aprendizaje.
+            </p><p class="align-right"><a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/1/#" class="ignore-all btn btn-small">
+                    Todo
+                </a><a href="https://community-courses.memrise.com/community/course/6153211/linux-utilities-no-typing/1/#" class="ignore-none btn btn-small">
+                    Ninguna
+                </a></p></div><div class="ignore-ui things-row" style="text-align: right"><strong>¿Ignorar?</strong></div><div class="thing text-text" data-learnable-id="21357595722241" data-thing-id="325891048" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?</div></div><div class="col_b col text"><div class="text">The preceding item is optional and matched at most once.</div></div></div><div class="thing text-text" data-learnable-id="21357595787777" data-thing-id="325891049" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">*</div></div><div class="col_b col text"><div class="text">The preceding item will be matched zero or more times.</div></div></div><div class="thing text-text" data-learnable-id="21357595853313" data-thing-id="325891050" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">+</div></div><div class="col_b col text"><div class="text">The preceding item will be matched one or more times.</div></div></div><div class="thing text-text" data-learnable-id="21357595918849" data-thing-id="325891051" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">{n}</div></div><div class="col_b col text"><div class="text">The preceding item is matched exactly n times.</div></div></div><div class="thing text-text" data-learnable-id="21357595984385" data-thing-id="325891052" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">{n-}</div></div><div class="col_b col text"><div class="text">The preceding item is matched n or more times.</div></div></div><div class="thing text-text" data-learnable-id="21357596049921" data-thing-id="325891053" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">{-m}</div></div><div class="col_b col text"><div class="text">The preceding item is matched at most m times.</div></div></div><div class="thing text-text" data-learnable-id="21357596115457" data-thing-id="325891054" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">{n-m}</div></div><div class="col_b col text"><div class="text">The preceding item is matched at least n times- but not more than m times.</div></div></div><div class="thing text-text" data-learnable-id="21357596180993" data-thing-id="325891055" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\n</div></div><div class="col_b col text"><div class="text">regex special characters</div></div></div><div class="thing text-text" data-learnable-id="21357596246529" data-thing-id="325891056" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\r</div></div><div class="col_b col text"><div class="text">new line</div></div></div><div class="thing text-text" data-learnable-id="21357596312065" data-thing-id="325891057" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\t</div></div><div class="col_b col text"><div class="text">carriage return</div></div></div><div class="thing text-text" data-learnable-id="21357596377601" data-thing-id="325891058" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\v</div></div><div class="col_b col text"><div class="text">tab</div></div></div><div class="thing text-text" data-learnable-id="21357596443137" data-thing-id="325891059" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\f</div></div><div class="col_b col text"><div class="text">vertical tab</div></div></div><div class="thing text-text" data-learnable-id="21357596508673" data-thing-id="325891060" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\xxx</div></div><div class="col_b col text"><div class="text">form feed</div></div></div><div class="thing text-text" data-learnable-id="21357596574209" data-thing-id="325891061" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\xhh</div></div><div class="col_b col text"><div class="text">octal character</div></div></div><div class="thing text-text" data-learnable-id="21357596639745" data-thing-id="325891062" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">^</div></div><div class="col_b col text"><div class="text">start of string or multi-line pattern</div></div></div><div class="thing text-text" data-learnable-id="21357596705281" data-thing-id="325891063" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\A</div></div><div class="col_b col text"><div class="text">start of string</div></div></div><div class="thing text-text" data-learnable-id="21357596770817" data-thing-id="325891064" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">$</div></div><div class="col_b col text"><div class="text">end of string or multi-line pattern</div></div></div><div class="thing text-text" data-learnable-id="21357596836353" data-thing-id="325891065" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\Z</div></div><div class="col_b col text"><div class="text">end of string</div></div></div><div class="thing text-text" data-learnable-id="21357596901889" data-thing-id="325891066" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\b</div></div><div class="col_b col text"><div class="text">word boundary</div></div></div><div class="thing text-text" data-learnable-id="21357596967425" data-thing-id="325891067" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\B</div></div><div class="col_b col text"><div class="text">not word boundary</div></div></div><div class="thing text-text" data-learnable-id="21357597032961" data-thing-id="325891068" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\&lt;</div></div><div class="col_b col text"><div class="text">start of word</div></div></div><div class="thing text-text" data-learnable-id="21357597098497" data-thing-id="325891069" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\&gt;</div></div><div class="col_b col text"><div class="text">end of word</div></div></div><div class="thing text-text" data-learnable-id="21357597164033" data-thing-id="325891070" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?=</div></div><div class="col_b col text"><div class="text">lookahead assertion</div></div></div><div class="thing text-text" data-learnable-id="21357597229569" data-thing-id="325891071" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?!</div></div><div class="col_b col text"><div class="text">negative lookahead</div></div></div><div class="thing text-text" data-learnable-id="21357597295105" data-thing-id="325891072" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?&lt;=</div></div><div class="col_b col text"><div class="text">lookbehind assertion</div></div></div><div class="thing text-text" data-learnable-id="21357597360641" data-thing-id="325891073" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?!= or ?&lt;=</div></div><div class="col_b col text"><div class="text">negative lookbehind</div></div></div><div class="thing text-text" data-learnable-id="21357597426177" data-thing-id="325891074" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?&gt;</div></div><div class="col_b col text"><div class="text">once only subexpression</div></div></div><div class="thing text-text" data-learnable-id="21357597491713" data-thing-id="325891075" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?()</div></div><div class="col_b col text"><div class="text">condition [if then]</div></div></div><div class="thing text-text" data-learnable-id="21357597557249" data-thing-id="325891076" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?()|</div></div><div class="col_b col text"><div class="text">condition [if then else]</div></div></div><div class="thing text-text" data-learnable-id="21357597622785" data-thing-id="325891077" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?#</div></div><div class="col_b col text"><div class="text">comment</div></div></div><div class="thing text-text" data-learnable-id="21357597688321" data-thing-id="325891078" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\c</div></div><div class="col_b col text"><div class="text">control character</div></div></div><div class="thing text-text" data-learnable-id="21357597753857" data-thing-id="325891079" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\s</div></div><div class="col_b col text"><div class="text">white space</div></div></div><div class="thing text-text" data-learnable-id="21357597819393" data-thing-id="325891080" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\S</div></div><div class="col_b col text"><div class="text">not white space</div></div></div><div class="thing text-text" data-learnable-id="21357597884929" data-thing-id="325891081" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\d</div></div><div class="col_b col text"><div class="text">digit</div></div></div><div class="thing text-text" data-learnable-id="21357597950465" data-thing-id="325891082" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\D</div></div><div class="col_b col text"><div class="text">not digit</div></div></div><div class="thing text-text" data-learnable-id="21357598016001" data-thing-id="325891083" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\w</div></div><div class="col_b col text"><div class="text">word</div></div></div><div class="thing text-text" data-learnable-id="21357598081537" data-thing-id="325891084" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\W</div></div><div class="col_b col text"><div class="text">not word</div></div></div><div class="thing text-text" data-learnable-id="21357598147073" data-thing-id="325891085" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\x</div></div><div class="col_b col text"><div class="text">hexadecimal digit</div></div></div><div class="thing text-text" data-learnable-id="21357598212609" data-thing-id="325891086" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\O</div></div><div class="col_b col text"><div class="text">octal digit</div></div></div><div class="thing text-text" data-learnable-id="21357598278145" data-thing-id="325891087" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">.</div></div><div class="col_b col text"><div class="text">any character except for a new line</div></div></div><div class="thing text-text" data-learnable-id="21357598343681" data-thing-id="325891088" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">?</div></div><div class="col_b col text"><div class="text">occurs 0 or 1 time</div></div></div><div class="thing text-text" data-learnable-id="21357598409217" data-thing-id="325891089" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">*</div></div><div class="col_b col text"><div class="text">occurs 0 or many times</div></div></div><div class="thing text-text" data-learnable-id="21357598474753" data-thing-id="325891090" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">+</div></div><div class="col_b col text"><div class="text">occurs 1 or more times</div></div></div><div class="thing text-text" data-learnable-id="21357598540289" data-thing-id="325891091" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">#</div></div><div class="col_b col text"><div class="text">matches a single numeric character</div></div></div><div class="thing text-text" data-learnable-id="21357598605825" data-thing-id="325891092" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">[]</div></div><div class="col_b col text"><div class="text">matches a single character listed within the brackets</div></div></div><div class="thing text-text" data-learnable-id="21357598671361" data-thing-id="325891093" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">[^]</div></div><div class="col_b col text"><div class="text">matches a single character NOT listed in the brackets</div></div></div><div class="thing text-text" data-learnable-id="21357598736897" data-thing-id="325891094" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">[A-C]</div></div><div class="col_b col text"><div class="text">a dash within square brackets defines a range of characters or numbers</div></div></div><div class="thing text-text" data-learnable-id="21357598802433" data-thing-id="325891095" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\</div></div><div class="col_b col text"><div class="text">any reserved GREP symbol proceeded by a backslash allows it to be used a s a literal character... \+</div></div></div><div class="thing text-text" data-learnable-id="21357598867969" data-thing-id="325891096" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">{}</div></div><div class="col_b col text"><div class="text">min-max cardinality</div></div></div><div class="thing text-text" data-learnable-id="21357598933505" data-thing-id="325891097" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">(ab)</div></div><div class="col_b col text"><div class="text">group characters</div></div></div><div class="thing text-text" data-learnable-id="21357598999041" data-thing-id="325891098" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">a | b</div></div><div class="col_b col text"><div class="text">logical "or"</div></div></div><div class="thing text-text" data-learnable-id="21357599064577" data-thing-id="325891099" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\wFFFF</div></div><div class="col_b col text"><div class="text">search for a unicode character</div></div></div><div class="thing text-text" data-learnable-id="21357599130113" data-thing-id="325891100" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\x</div></div><div class="col_b col text"><div class="text">This is a character represented by its hex value.... I.E \x42 is an uppercase B.</div></div></div><div class="thing text-text" data-learnable-id="21357599195649" data-thing-id="325891101" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">$</div></div><div class="col_b col text"><div class="text">matches the character(s) at the end of a line</div></div></div><div class="thing text-text" data-learnable-id="21357599261185" data-thing-id="325891102" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">^</div></div><div class="col_b col text"><div class="text">matches the character(s) at the beginning of a line</div></div></div><div class="thing text-text" data-learnable-id="21357599326721" data-thing-id="325891103" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\b</div></div><div class="col_b col text"><div class="text">match a word boundary (i.e. whole word)</div></div></div><div class="thing text-text" data-learnable-id="21357599457793" data-thing-id="325891105" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">\B</div></div><div class="col_b col text"><div class="text">match except at a word boundary (i.e. the characters contained in a word- but not in a whole word)</div></div></div><div class="thing text-text" data-learnable-id="21357599523329" data-thing-id="325891106" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">c+</div></div><div class="col_b col text"><div class="text">matches one or more occurrences of character c</div></div></div><div class="thing text-text" data-learnable-id="21357599588865" data-thing-id="325891107" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">c?</div></div><div class="col_b col text"><div class="text">matches zero of more occurrences of character c</div></div></div><div class="thing text-text" data-learnable-id="21357599654401" data-thing-id="325891108" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">exp1 | exp2</div></div><div class="col_b col text"><div class="text">matches exp1 or exp2</div></div></div><div class="thing text-text" data-learnable-id="21357599719937" data-thing-id="325891109" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">( exp1 | exp2 ) exp3</div></div><div class="col_b col text"><div class="text">matches exp1 exp3 or exp2 exp3</div></div></div><div class="thing text-text" data-learnable-id="21357599785473" data-thing-id="325891110" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep "Waldo" filename</div></div><div class="col_b col text"><div class="text">Search a single file:</div></div></div><div class="thing text-text" data-learnable-id="21357599851009" data-thing-id="325891111" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep "Waldo" FILE_PATTERN</div></div><div class="col_b col text"><div class="text">Search multiple files:</div></div></div><div class="thing text-text" data-learnable-id="21357599916545" data-thing-id="325891112" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -i "WaLdO" filename</div></div><div class="col_b col text"><div class="text">Case insensitive search:</div></div></div><div class="thing text-text" data-learnable-id="21357599982081" data-thing-id="325891113" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep "REGEX" filename</div></div><div class="col_b col text"><div class="text">Match regex in file:</div></div></div><div class="thing text-text" data-learnable-id="21357600047617" data-thing-id="325891114" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -A &lt;N&gt; "Waldo" filename</div></div><div class="col_b col text"><div class="text">Display N lines after match:</div></div></div><div class="thing text-text" data-learnable-id="21357600113153" data-thing-id="325891115" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -B &lt;N&gt; "Waldo" filename</div></div><div class="col_b col text"><div class="text">Display N lines before match:</div></div></div><div class="thing text-text" data-learnable-id="21357600178689" data-thing-id="325891116" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -C 2 "Waldo" demo_text</div></div><div class="col_b col text"><div class="text">Display N lines around match:</div></div></div><div class="thing text-text" data-learnable-id="21357600244225" data-thing-id="325891117" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -v "Waldo" demo_text</div></div><div class="col_b col text"><div class="text">Invert match:</div></div></div><div class="thing text-text" data-learnable-id="21357600309761" data-thing-id="325891118" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -v -c "Waldo" demo_file</div></div><div class="col_b col text"><div class="text">Count non-matches</div></div></div><div class="thing text-text" data-learnable-id="21357600375297" data-thing-id="325891119" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -l "Waldo" demo_*</div></div><div class="col_b col text"><div class="text">List filenames for matches</div></div></div><div class="thing text-text" data-learnable-id="21357600440833" data-thing-id="325891120" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -o "Waldo" demo_file</div></div><div class="col_b col text"><div class="text">Displays matched string</div></div></div><div class="thing text-text" data-learnable-id="21357600506369" data-thing-id="325891121" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -o -b "Waldo" file</div></div><div class="col_b col text"><div class="text">Returns match position on a line</div></div></div><div class="thing text-text" data-learnable-id="21357600571905" data-thing-id="325891122" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -c "Waldo" filename</div></div><div class="col_b col text"><div class="text">Count matches:</div></div></div><div class="thing text-text" data-learnable-id="21357600637441" data-thing-id="325891123" data-initial-ignore="0"><div class="thinguser"><i class="ico ico-water ico-blue"></i><div class="status">now</div></div><div class="ignore-ui pull-right"><input type="checkbox"></div><div class="col_a col text"><div class="text">grep -r "Waldo" *</div></div><div class="col_b col text"><div class="text">Searching files recursively:</div></div></div><div class="things-footer things-row clearfix"><a class="ignore-save ignore-ui btn pull-right btn-primary btn-large btn-block hide">
+                Guardar
+            </a></div></div>
+
+
+        
+
+    </div>
+
+
+            </div>
+        </div>
+    
+
+    
+
+    
+        
+
+<div class="footer-root">
+  <div class="footer-swoosh">
+    <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/swoosh-f90e07ebfb13.svg" alt="">
+  </div>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/about">Acerca de Memrise</a>
+        <a class="footer-link" href="https://www.memrise.com/team">Equipo</a>
+        <a class="footer-link" href="https://www.memrise.com/jobs">Trabaja con nosotros</a>
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://blog.memrise.com/">Blog</a>
+        <a class="footer-link" href="https://engineering.memrise.com/">Blog de programación</a>
+        <a class="footer-link" href="https://www.memrise.com/press">Prensa</a>
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/contact">Escríbenos</a>
+        <a class="footer-link" href="https://memrise.zendesk.com/hc/">Preguntas frecuentes y ayuda</a>
+        
+      </div>
+
+      <div class="footer-links-container">
+        <a class="footer-link" href="https://www.memrise.com/dictionary">Phrasebooks</a>
+        
+      </div>
+
+      <div class="footer-links-sub">
+        <a class="footer-link" href="https://www.memrise.com/terms">Condiciones de uso</a>
+        <a class="footer-link" href="https://www.memrise.com/privacy">Política de privacidad</a>
+        <a class="footer-link" href="https://www.memrise.com/cookies">Política de cookies</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-logo-container">
+        <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/logo-997c4d62a113.svg" alt="Memrise logo">
+      </div>
+      
+      <div class="footer-social-links">
+        <a class="footer-social-link" href="https://www.facebook.com/memrise" target="_blank">
+          <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/facebook-92317b7cfd13.svg" alt="">
+        </a>
+        <a class="footer-social-link" href="https://twitter.com/memrise" target="_blank">
+          <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/twitter-2ca5e163d013.svg" alt="">
+        </a>
+
+        <a class="footer-social-link" href="https://www.youtube.com/channel/UC4Ywz0GYzq7nlPtKCMQ8m0w" target="_blank">
+          <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/youtube-41dd4e237d13.svg" alt="">
+        </a>
+        <a class="footer-social-link" href="https://www.instagram.com/memrise" target="_blank">
+          <img src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/instagram-8842365eb713.svg" alt="">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    
+
+    </div> 
+
+    
+
+    
+
+
+
+
+
+<script type="text/javascript">
+
+    MEMRISE = {
+        DEBUG: false, 
+        STATIC_URL: 'https://static.memrise.com/',
+        REST_API_URL: '/v1.25',
+        DOMAIN: 'https://community-courses.memrise.com',
+        LANG: 'es-mx',
+        csrftoken: "q0tvrHUxL7ihWnDgSupchv3Ic2pV7XseIhOc8BRlBC36dAdyVbYReaoTZ33vuyEi",
+        ugc_only_site: true,
+        
+        user: {
+            is_authenticated: true
+            
+                ,
+                id: 13994876,
+                username: 'Flyxion',
+                email: 'nateguimondart@gmail.com',
+                profile: {
+                    settings: {},
+                },
+                is_premium: false,
+            
+        },
+        trans: {
+            quitCourse: '\u000A    Aunque dejes este curso, no se borrará tu historial de aprendizaje, pero desaparecerá de tu lista de cursos en la página principal. Puedes volver al curso y restablecer tu progreso cuando quieras,\u000A pero tendrás que encontrarlo en la sección \u0022Cursos\u0022. ¿Seguro que quieres dejarlo?\u000A'
+        },
+        
+        urls: {
+            locale: 'dist/locales/es-mx/translation.json',
+        },
+        
+    };
+</script>
+
+    <script src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/libs-dfea1f72ab13.js.download"></script>
+    <script src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/templates-6fb813771c13.js.download"></script>
+    <script src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/memrise-bundle-b6764e510e13.js.download"></script>
+    
+
+    
+    <script type="text/javascript" src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/course-04297e6d1e13.js.download"></script>
+
+
+    
+
+    <script type="text/javascript" src="./Nivel 1 - Regular Expressions - Linux Utilities (no typing) - Memrise_files/level-204d0418ff13.js.download"></script>
+
+
+
+
+</body><style class="stylus">/* Apply your custom font globally */
+* {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for web page titles (usually h1 tags) */
+h1, .title, .heading {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Specific styling for page subtitles (usually h2 tags) */
+h2, .subtitle {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to links */
+a {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to navigation menus */
+nav, .navbar, .menu {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to buttons */
+button, .btn {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Apply custom font to form elements */
+input, textarea, select {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Additional elements that might need custom styling */
+p, span, div, li {
+    font-family: 'SGA Regular' !important;
+}
+
+/* Attempt to style browser-specific elements (experimental) */
+.titlebar, .tab-title {
+    font-family: 'SGA Regular' !important;
+}
+</style></html>
